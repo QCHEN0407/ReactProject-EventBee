@@ -1,4 +1,7 @@
 {
+    "name": "frontend",
+    "version": "1.0.0",
+    "description": "",
     "scripts": {
         "heroku-postbuild": "npm run build --prefix frontend",
         "install": "npm --prefix backend install backend && npm --prefix frontend install frontend",
