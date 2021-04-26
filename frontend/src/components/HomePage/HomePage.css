@@ -9,13 +9,17 @@ body {
     padding-right: 20px;
     padding-left: 30px;
     position: center;
-    border: none ;
+    border-left: 5px;
+    border-top: none;
+    border-left-style: solid;
+    border-color: #f05537;
     background-color: #1E0A3C;
-    border-radius: 3px;
+    border-radius: 4px;
     height: 100px;
-    width: 1130px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 4px 12px -4px rgb(46 55 77 / 12%);
 
 }
 .adsBanner h1 {
@@ -29,3 +33,55 @@ body {
 .adsBanner p {
     color:white;
 }
+.blackText{
+    color:black;
+    font-size: 55px;
+    margin-top: -5px;
+    margin-left: 135px;
+    font-weight: bold;
+
+
+}
+.orangeText{
+    margin-top: 120px;
+    font-size: 30px;
+    margin-left: 135px;
+
+}
+.getTicketsBtn{
+    display: inline-block;
+    text-align: center;
+    background-color: #D1410C ;
+    color: white;
+    margin-left: 135px;
+    font-size: 18px;
+    border-radius: 40px;
+    height: 60px;
+    width: 160px;
+    border: none;
+    /* transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px; */
+
+}
+/* .getTicketsBtn span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.getTicketsBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.getTicketsBtn:hover span{
+    padding-right: 25px;
+}
+.getTicketsBtn:hover span:after{
+    opacity: 1;
+    right: 0;
+} */
