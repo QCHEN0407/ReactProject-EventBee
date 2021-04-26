@@ -1,9 +1,27 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import './HomePage.css';
 import Navigation from "../Navigation";
+import { useState} from 'react';
+import { csrfFetch } from '../../store/csrf';
 
 function HomePage({isLoaded}) {
+
+
+const [events, setEvents] = useState([]);
+
+ useEffect(()=>{
+    async function fetchEvents() {
+        const response = await csrfFetch('/api/events'); 
+        const json = await response.json();
+        setEvents(json);
+        console.log(json);
+        console.log(events);
+        return () => console.log('unmounting...');
+    }
+    fetchEvents();
+ }, [])
+
+
  return(
     <div>
         <Navigation isLoaded={isLoaded}/>
@@ -17,7 +35,20 @@ function HomePage({isLoaded}) {
             <h1 className="blackText">online events</h1>
             <button className="getTicketsBtn" >Get tickets</button>
             <image className="homepageImg" src="../imgs/HomepagePic.png"></image>
+        </div>
 
+        <div className='popularEvents'>
+            {
+                events.map(e => {
+                    <div className="card">
+                        <img className='image' src={e.event_img} alt="picture" />
+                        <div className="container">
+                            {e.title}
+                        </div>
+                    </div>
+                })
+            }
+            
         </div>
     </div>
 
