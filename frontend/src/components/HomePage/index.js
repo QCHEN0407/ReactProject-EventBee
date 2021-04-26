@@ -16,6 +16,7 @@ function HomePage({isLoaded}) {
             <h1 className="orangeText">Discover the best</h1>
             <h1 className="blackText">online events</h1>
             <button className="getTicketsBtn" >Get tickets</button>
+            <image className="homepageImg" src="../imgs/HomepagePic.png"></image>
 
         </div>
     </div>
