@@ -26,6 +26,16 @@ function HomePage({isLoaded}) {
             <h1 className="blackText">online events</h1>
             <button className="getTicketsBtn" >Get tickets</button>
             <img className="homepageImg" src="../imgs/HomepagePic.png"></img>
+        <div className="secondNavbar">
+            <div className="searchfield">
+            <h1>Popular in</h1>
+            <input className='second_search' type='search' placeholder="Online Events" />
+            </div>
+            <div className='tagMenu'>
+
+            </div>
+
+        </div>
         </div>
 
         <div className='popularEvents'>

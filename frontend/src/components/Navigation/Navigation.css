@@ -81,7 +81,7 @@
     background-image: "frontend/public/imgs/search3.png";
     background-position: 10px 6px;
     background-repeat: no-repeat;
-    padding-left: 40px;
+    padding-left: 20px;
     background-size: 20px 20px;
 
   }
@@ -240,4 +240,15 @@
     font-size: 19pt;
     font-family: sans-serif;
 
+  }
+
+  .search_bar{
+    display: flex;
+  }
+  .amplifier{
+    height: 30px;
+    margin-left: -40px;
+    background-color: #7E7E7E;
+    margin-top: 20px;
+    border-radius: 10px;
   }

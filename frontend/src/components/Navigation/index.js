@@ -33,8 +33,17 @@ function Navigation({ isLoaded }){
       <div className='nav_content'>
         <div className='navbar_left'>
           <h1>eventbee</h1>
+<<<<<<< HEAD
           <img className='navbar_logo' src='/imgs/300.jpeg' alt=""/>
           <input className='navbar_search' type='search' laceholder="Search your Event" />
+=======
+          <img className='navbar_logo' src='/imgs/300.jpeg' alt="" onClick="location.href='/'"/>
+          <div className='search_bar'>
+            <input className='navbar_search' type='search' placeholder="Search your event..." />
+            <img className='amplifier' src='../imgs/search3.png'></img>
+          </div>
+
+>>>>>>> aefc7b0 (working on second nav)
         </div>
         <div className='navbar_right'>
           <div className='navbar_btn'>
