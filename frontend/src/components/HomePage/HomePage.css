@@ -36,7 +36,7 @@ body {
 .blackText{
     color:black;
     font-size: 45px;
-    margin-top: -10px;
+    margin-top: -14px;
     margin-left: 135px;
     font-weight: bold;
 
@@ -88,7 +88,7 @@ body {
 
 .greySquare{
     height: 300px;
-    width: 1000px;
+    width: 700px;
     background-color: #F8F7Fa;
     margin-top: 70px;
     margin-left: 200px;
@@ -109,15 +109,23 @@ body {
     transition: 0.3s;
     width: 25%;
   }
-  
+
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-  
+
 .container {
     padding: 2px 16px;
 }
 
 .image {
     width: 100%;
+}
+.homepageImg{
+    display: block;
+    width: 630px;
+    height: 380px;
+    margin-left: auto;
+    margin-top: -250px;
+    margin-right: 100px;
 }

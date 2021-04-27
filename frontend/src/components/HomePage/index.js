@@ -11,7 +11,7 @@ const [events, setEvents] = useState([]);
 
  useEffect(()=>{
     async function fetchEvents() {
-        const response = await csrfFetch('/api/events'); 
+        const response = await csrfFetch('/api/events');
         const json = await response.json();
         setEvents(json);
         console.log(json);
@@ -34,7 +34,7 @@ const [events, setEvents] = useState([]);
             <h1 className="orangeText">Discover the best</h1>
             <h1 className="blackText">online events</h1>
             <button className="getTicketsBtn" >Get tickets</button>
-            <image className="homepageImg" src="../imgs/HomepagePic.png"></image>
+            <img className="homepageImg" src="../imgs/HomepagePic.png"></img>
         </div>
 
         <div className='popularEvents'>
@@ -48,7 +48,7 @@ const [events, setEvents] = useState([]);
                     </div>
                 })
             }
-            
+
         </div>
     </div>
 
