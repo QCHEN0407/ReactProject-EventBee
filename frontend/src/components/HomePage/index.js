@@ -4,15 +4,22 @@ import Navigation from "../Navigation";
 import { useDispatch, useSelector } from 'react-redux';
 import { getEvents } from '../../store/event'
 
+import GlobalFooter from "../Footer"
+import { useHistory } from "react-router-dom";
 
 function HomePage({isLoaded}) {
 
     const dispatch = useDispatch();
     const events = useSelector(state => state.event.events);
+    const history = useHistory();
 
     useEffect(() => {
         dispatch(getEvents());
     }, [dispatch]);
+
+    const toEventPage = (id) => { 
+        history.push(`/event/${id}`)
+    }
 
  return(
     <div>
@@ -42,7 +49,7 @@ function HomePage({isLoaded}) {
         <div className='popularEvents'>
             {
                 events?.map(e =>  { return (
-                    <div style={{cursor: 'pointer'}} className="card">
+                    <div style={{cursor: 'pointer'}} className="card" onClick={()=>{toEventPage(e.id)}}>
                         <img className='image' src={e.event_img} alt="picture" />
                         <div className="container">
                             {e.title}

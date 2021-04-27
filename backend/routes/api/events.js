@@ -12,5 +12,13 @@ router.get('/', asyncHandler(async (req, res) => {
     return res.json(events);
 }));
 
+router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
+
+    let eventId = parseInt(req.params.id, 10);
+    let event = await Event.findByPk(eventId);
+
+    return res.json(event);
+}));
+
 
 module.exports = router;
