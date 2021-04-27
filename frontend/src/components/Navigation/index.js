@@ -26,7 +26,7 @@ function Navigation({ isLoaded }){
       <div className='nav_content'>
         <div className='navbar_left'>
           <h1>eventbee</h1>
-          <img className='navbar_logo' src='/imgs/300.jpeg' alt="" onClick="location.href='/'"/>
+          <img className='navbar_logo' src='/imgs/300.jpeg' alt=""/>
           <input className='navbar_search' type='search' laceholder="Search your Event" />
         </div>
         <div className='navbar_right'>
