@@ -246,9 +246,9 @@
     display: flex;
   }
   .amplifier{
-    height: 30px;
+    height: 22px;
     margin-left: -40px;
     background-color: #7E7E7E;
-    margin-top: 20px;
-    border-radius: 10px;
+    margin-top: 24px;
+    border-radius: 7px;
   }
