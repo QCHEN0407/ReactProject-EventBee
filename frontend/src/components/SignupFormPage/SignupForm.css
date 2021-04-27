@@ -1,0 +1,160 @@
+* {box-sizing: border-box}
+
+body {
+    padding-top: 65px;
+    background-color:  white;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+  }
+
+.formImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%px;
+    height: 100px;
+
+}
+.eventbee{
+    color: #f05537
+}
+.formContainer h1{
+    color:black;
+    text-align: center;
+}
+
+.errorList{
+    color: red;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background:#F8F7Fa;
+    border-radius: 5px;
+
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+label {
+    font-weight: bold;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.form{
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+}
+/* Set a style for all buttons */
+/* button {
+  background-color: #b0dda4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 3px;
+} */
+
+button:hover {
+  opacity:1;
+}
+
+
+
+.signupbtn {
+    display: inline-block;
+    text-align: center;
+    background-color: #ffb920 ;
+    color: white;
+
+    font-size: 15px;
+    border-radius: 4px;
+    height: 45px;
+    width: 100%;
+    border: none;
+}
+
+.demoUserBtn{
+    display: inline-block;
+    text-align: center;
+    background-color: #D1410C ;
+    color: white;
+
+    font-size: 18px;
+    border-radius: 40px;
+    height: 45px;
+    width: 140px;
+    border: none;
+}
+
+.goBackbtn{
+    float: left;
+    width: 48%;
+    background-color: #d33f49;
+    float: right;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    border-radius: 3px;
+}
+
+/* Add padding to container elements */
+.formContainer {
+  display: block;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  padding-bottom: 72px;
+  width: 30%;
+
+}
+
+.demobtn{
+  float: left;
+  width: 25em;
+  background-color: #cb904d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius: 3px;
+  margin-bottom: 150px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}

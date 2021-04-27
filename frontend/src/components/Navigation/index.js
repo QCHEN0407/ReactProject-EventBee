@@ -27,12 +27,15 @@ function Navigation({ isLoaded }){
   const toLogin = () => {
     history.push('/login')
   }
+  const toHomepage = () => {
+    history.push('/')
+  }
 
   return (
     <div className='navbar'>
       <div className='nav_content'>
         <div className='navbar_left'>
-          <h1>eventbee</h1>
+          <h1 onClick={toHomepage} style={{cursor: 'pointer'}} >eventbee</h1>
           <img className='navbar_logo' src='/imgs/300.jpeg' alt=""/>
           <div className='search_bar'>
             <input className='navbar_search' type='search' placeholder="Search your event..." />
@@ -42,9 +45,9 @@ function Navigation({ isLoaded }){
         </div>
         <div className='navbar_right'>
           <div className='navbar_btn'>
-            <button className='navbar_btn_login'> Host an event </button>
-            <button className='navbar_btn_login'> Help </button>
-            <button className='navbar_btn_login' onClick={toLogin}> Log In </button>
+            <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Host an event </button>
+            <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Help </button>
+            <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={toLogin}> Log In </button>
           </div>
         </div>
       </div>

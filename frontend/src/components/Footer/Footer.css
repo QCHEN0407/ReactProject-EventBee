@@ -1,7 +1,11 @@
 .globalFooter{
-    display: block;
-    padding: 27px;
-    text-align: center;
-    background:#1E0A3C;
-    margin-top: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1E0A3C;
+  color: white;
+  text-align: center;
+  padding: 27px;
+
 }

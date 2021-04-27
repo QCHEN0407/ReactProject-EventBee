@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import './SignupForm.css';
+import GlobalFooter from "../Footer";
+import Navigation from "../Navigation";
 
 function SignupFormPage() {
     const dispatch = useDispatch();
@@ -29,48 +31,59 @@ function SignupFormPage() {
     };
 
     return (
-      <form onSubmit={handleSubmit}>
-        <ul>
-          {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-        </ul>
-        <label>
-          Email
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Username
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Confirm Password
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-        </label>
-        <button type="submit">Sign Up</button>
-      </form>
+      <div>
+        <div>
+        <Navigation />
+        </div>
+        <div className="formContainer">
+        <img className="formImg" src="/imgs/300.jpeg"></img>
+        <h1>Sign up for <span className="eventbee">eventbee</span></h1>
+        <form onSubmit={handleSubmit}>
+          <ul>
+            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+          </ul>
+
+            <input
+              placeholder="Email"
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+
+            <input
+            placeholder="Username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+
+
+            <input
+            placeholder="Password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+
+            <input
+            placeholder="Confirm Password"
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+
+          <button className="signupbtn" style={{cursor: 'pointer'}} type="submit">Sign Up</button>
+        </form>
+        </div>
+        <div>
+        <GlobalFooter />
+
+      </div>
+      </div>
     );
   }
 

@@ -3,7 +3,7 @@ import './HomePage.css';
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from 'react-redux';
 import { getEvents } from '../../store/event'
-import GlobalFooter from "../Footer"
+
 
 function HomePage({isLoaded}) {
 
@@ -25,7 +25,7 @@ function HomePage({isLoaded}) {
             <div className="greySquare"></div>
             <h1 className="orangeText">Discover the best</h1>
             <h1 className="blackText">online events</h1>
-            <button className="getTicketsBtn" >Get tickets</button>
+            <button style={{cursor: 'pointer'}} className="getTicketsBtn" >Get tickets</button>
             <img className="homepageImg" src="../imgs/HomepagePic.png"></img>
         <div className="secondNavbar">
             <div className="searchfield">
@@ -42,7 +42,7 @@ function HomePage({isLoaded}) {
         <div className='popularEvents'>
             {
                 events?.map(e =>  { return (
-                    <div className="card">
+                    <div style={{cursor: 'pointer'}} className="card">
                         <img className='image' src={e.event_img} alt="picture" />
                         <div className="container">
                             {e.title}
