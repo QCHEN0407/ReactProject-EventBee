@@ -190,5 +190,6 @@ body {
     padding: 150px;
     text-align: center;
     background:#1E0A3C;
-    margin-top: 20px;
+    margin-top: -3px;
+    margin-bottom: none;
 }

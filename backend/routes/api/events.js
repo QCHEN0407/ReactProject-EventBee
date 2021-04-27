@@ -6,9 +6,9 @@ const { Event } = require('../../db/models');
 const router = express.Router();
 
 router.get('/', asyncHandler(async (req, res) => {
-    
+
     let events = await Event.findAll();
-    
+
     return res.json(events);
 }));
 

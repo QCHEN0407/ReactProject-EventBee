@@ -3,6 +3,7 @@ import './HomePage.css';
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from 'react-redux';
 import { getEvents } from '../../store/event'
+import GlobalFooter from "../Footer"
 
 function HomePage({isLoaded}) {
 
@@ -52,7 +53,9 @@ function HomePage({isLoaded}) {
             }
 
         </div>
+
         <footer className="homepageFooter"></footer>
+
     </div>
 
  )
