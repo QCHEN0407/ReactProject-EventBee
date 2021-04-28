@@ -1,28 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import { useHistory } from "react-router-dom";
 import LoginFormPage from "../LoginFormPage";
+import * as sessionActions from '../../store/session';
 
 function Navigation({ isLoaded }){
   const history = useHistory();
+  const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
-
-  let sessionLinks;
-  if (sessionUser) {
-    sessionLinks = (
-      <ProfileButton user={sessionUser} />
-    );
-  } else {
-    sessionLinks = (
-      <>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
-      </>
-    );
-  }
 
   const toLogin = () => {
     history.push('/login')
@@ -30,6 +18,30 @@ function Navigation({ isLoaded }){
   const toHomepage = () => {
     history.push('/')
   }
+
+  const removeUser = () => {
+    return dispatch(sessionActions.logout())
+      .catch(async (res) => {
+      });
+  }
+
+  let sessionLinks;
+  if (sessionUser) {
+    sessionLinks = (
+      //<ProfileButton user={sessionUser} />
+      <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={removeUser}> Log Out </button>
+    );
+  } else {
+    sessionLinks = (
+      <>
+        {/* <NavLink to="/login">Log In</NavLink>
+        <NavLink to="/signup">Sign Up</NavLink> */}
+        <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={toLogin}> Log In </button>
+      </>
+    );
+  }
+
+
 
   return (
     <div className='navbar'>
@@ -47,7 +59,8 @@ function Navigation({ isLoaded }){
           <div className='navbar_btn'>
             <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Host an event </button>
             <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Help </button>
-            <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={toLogin}> Log In </button>
+            {/* <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={toLogin}> Log In </button> */}
+            {sessionLinks}
           </div>
         </div>
       </div>

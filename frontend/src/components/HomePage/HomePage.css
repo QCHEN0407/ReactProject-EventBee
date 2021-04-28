@@ -106,6 +106,7 @@ body {
     margin-top: 100px;
     justify-content: space-between;
     flex-wrap:wrap;
+
 }
 
 .card {
@@ -129,11 +130,6 @@ body {
     font-size:18px;
     font-weight: bold;
     color: #39364f
-
-}
-.container title {
-
-    font-size: 14px;
 
 }
 

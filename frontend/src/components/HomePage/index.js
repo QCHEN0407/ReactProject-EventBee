@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import './HomePage.css';
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from 'react-redux';
-import { getEvents } from '../../store/event'
-
-import GlobalFooter from "../Footer"
+import { getEventById, getEvents } from '../../store/event'
 import { useHistory } from "react-router-dom";
 
 function HomePage({isLoaded}) {
@@ -17,7 +15,7 @@ function HomePage({isLoaded}) {
         dispatch(getEvents());
     }, [dispatch]);
 
-    const toEventPage = (id) => { 
+    const toEventPage = (id) => {
         history.push(`/event/${id}`)
     }
 
