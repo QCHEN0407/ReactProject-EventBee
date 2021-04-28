@@ -140,10 +140,10 @@ body {
 .homepageImg{
     display: block;
     width: 47%;
-    height: 10%;
+
     margin-left: auto;
     margin-top: -280px;
-    margin-right: 100px;
+    margin-right: 116px;
 }
 .searchfield{
     display: flex;

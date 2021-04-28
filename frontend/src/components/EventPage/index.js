@@ -29,14 +29,18 @@ function EventPage() {
 
     return (
         <div>
-            <img className='eventImage' src={event.event_img} alt=""/>
-            <div className='eventTitle'>
-                {event.title}
+            <div>
+            <Navigation />
             </div>
-            <div className='eventDescription'>
-                {event.description}
+            <div className="eventDetail">
+                <img className='eventImage' src={event.event_img} alt=""/>
+                <div className='eventTitle'>
+                    {event.title}
+                </div>
+                <div className='eventDescription'>
+                    {event.description}
+                </div>
             </div>
-
             <div className="scroll">
 
                     {
@@ -50,6 +54,10 @@ function EventPage() {
                             )
                         })
                     }
+
+            </div>
+            <div>
+            <GlobalFooter />
 
             </div>
         </div>
