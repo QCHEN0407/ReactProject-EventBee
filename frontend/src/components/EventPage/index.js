@@ -32,6 +32,7 @@ function EventPage() {
             <div>
             <Navigation />
             </div>
+            <img className='blur-img' src={event.event_img} alt=""/>
             <div className="eventDetail">
                 <img className='eventImage' src={event.event_img} alt=""/>
                 <div className='eventTitle'>
