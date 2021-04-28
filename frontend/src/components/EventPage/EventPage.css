@@ -1,18 +1,15 @@
-.eventDetail{
-    margin-left: 200px;
-    margin-right: 200px;
-    align-content: center;
-
-
-}
 
 .eventDetail{
     margin-top: -200px;
     position: absolute;
-
-    margin-top: -660px;
+    margin-left: 140px;
+    margin-right: auto;
+    margin-top: -670px;
     height: 1000px;
     background-color: white;
+    width: 1150px;
+    align-content: center;
+
 }
 
 .blur-img {
@@ -34,7 +31,47 @@
     margin-right: auto;
 
 }
+.buttonArea{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: inherit;
+    height: 66px;
 
+    width: 1150px;
+    height: 66px;
+    margin-top: 400px;
+    border-style: solid;
+    border-color: #DBDAE3;
+    border-width: 1px 0;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+
+}
+.ticketbtn{
+    font-weight: 600;
+    color: #FFF;
+    background-color: #0D8547;
+    margin-left: 810px;
+
+    display: inline-block;
+
+    zoom: 1;
+    transition: all .2s ease-out;
+    vertical-align: middle;
+    position: relative;
+    height: 44px;
+    border: 2px solid transparent;
+    padding: 0 135px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    line-height: 26px;
+    font-size: 15px;
+    border-radius: 4px;
+}
 .eventTitle {
     margin-top: 100px;
     font-weight: bold;

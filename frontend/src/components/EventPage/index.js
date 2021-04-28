@@ -35,6 +35,9 @@ function EventPage() {
             <img className='blur-img' src={event.event_img} alt=""/>
             <div className="eventDetail">
                 <img className='eventImage' src={event.event_img} alt=""/>
+                <div className="buttonArea">
+                    <button className="ticketbtn" style={{cursor: 'pointer'}} type="submit">Tickets</button>
+                </div>
                 <div className='eventTitle'>
                     {event.title}
                 </div>
