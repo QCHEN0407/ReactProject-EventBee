@@ -15,7 +15,7 @@
 
 .blur-img {
     filter: blur(30px);
-    -webkit-filter: blur(70px);
+    -webkit-filter: blur(80px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -77,6 +77,8 @@
     box-sizing: border-box;
 
 }
+
+
 .ticketbtn{
     font-weight: 600;
     color: #FFF;

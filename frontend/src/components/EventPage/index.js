@@ -15,7 +15,7 @@ function EventPage() {
     const events = useSelector(state => state.event.events);
     const tickets = useSelector(state => state.event.tickets);
     const history = useHistory();
-    
+
     const [showModal, setShowModal] = useState(false);
 
 
@@ -68,6 +68,8 @@ function EventPage() {
                     </h1>
                 </div>
                 <div className="buttonArea">
+
+
                     <button className="ticketbtn" style={{cursor: 'pointer'}} onClick={displayModalAndSetTicketState}>Tickets</button>
                     {
                         showModal && (
