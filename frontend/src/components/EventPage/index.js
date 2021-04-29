@@ -25,6 +25,17 @@ function EventPage() {
         dispatch(getTicketsByEventId(eventId));
     }, [dispatch]);
 
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://kit.fontawesome.com/d6e97cbe72.js";
+        script.crossorigin="anonymous";
+        script.async = true;
+        document.body.appendChild(script);
+        return () => {
+          document.body.removeChild(script);
+        }
+      }, []);
+
     const toEventPage = (id) => {
         dispatch(getEventById(id));
         history.push(`/event/${id}`);
@@ -33,6 +44,10 @@ function EventPage() {
     const displayModalAndSetTicketState = () => {
         setShowModal(true);
         dispatch(getTicketsByEventId(eventId));
+    }
+
+    const LikeOrUnlike = () => {
+        document.querySelector(".fas").classList.toggle("fa-color");
     }
 
     if (!event) {
@@ -66,6 +81,9 @@ function EventPage() {
                     <h1>About this Event</h1>
                     {event.description}
                 </div>
+
+                <i class="fas fa-heart fa-3x fa-color" onClick={LikeOrUnlike}></i>
+
             </div>
             <div className="scroll">
 

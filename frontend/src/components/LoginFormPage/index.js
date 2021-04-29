@@ -28,6 +28,15 @@ function LoginFormPage() {
       });
   }
 
+  const loginAsDemoUser = () => {
+    dispatch(sessionActions.login({ credential:"demo@user.io", password: "password" }))
+      .catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      });
+    <Redirect to="/" />
+  }
+
   const toSignupPage = () => {
     history.push('/signup')
   }
@@ -65,7 +74,7 @@ function LoginFormPage() {
           <button className="loginbtn" style={{cursor: 'pointer'}} type="submit">Get Started</button>
           <p className="or">Or</p>
           <button className="gotoSignupbtn" style={{cursor: 'pointer'}} onClick={toSignupPage}>Go to Sign up</button>
-          <button className="demouserlogin" style={{cursor: 'pointer'}} type="submit">Log in as Demo user</button>
+          <button className="demouserlogin" type="button" style={{cursor: 'pointer'}} onClick={loginAsDemoUser}>Log in as Demo user</button>
 
         </form>
       </div>
