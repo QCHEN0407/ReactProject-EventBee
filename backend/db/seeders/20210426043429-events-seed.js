@@ -217,7 +217,85 @@ module.exports = {
         creater_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      // {
+      //   id:7,
+      //   title:'',
+      //   description:'',
+      //   event_img: '',
+      //   event_date: new Date(),
+      //   location: '',
+      //   creater_id: 1,
+      //   createdAt: new Date(),
+      //   updatedAt: new Date()
+      // }
+      {
+        id:7,
+        title:'Crosscut Festival',
+        description:'Journalists, politicians, authors, and newsmakers from our community and across the nation come together to take a hard look at the people, policy and events that shape our lives.\n'+
+        '\n'+
+        'This year\'s speakers include Jane Goodall, Ibram X. Kendi, Nancy Pelosi, Judy Woodruff, Rick Steves, Bill Nye, Pramila Jayapal, Robert Reich and many more. View the full schedule here!\n'+
+        '\n'+
+        'A virtual Headliners Night will kick-off the festival on May 3rd to celebrate and support great public media and journalism in the Pacific Northwest. A fundraiser for KCTS 9 and Crosscut, this event honors newsmakers who take us beyond the headlines and celebrates the creativity of our community. The evening will include special guest appearances by Judy Woodruff, Rick Steves and Seattle band Ladies. Please note that VIP options for the festival and Headliners Night are sold out.\n'+
+        '\n'+
+        'Watch virtual sessions live or on-demand throughout the week, with select sessions on KCTS 9 the following week.',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F120724877%2F53994006732%2F1%2Foriginal.20201211-222441?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=d66e6e50b8067ab2353799f650a33827',
+        event_date: new Date(),
+        location: 'Online Event',
+        creater_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+          id:8,
+          title:'MARCELA & CARINA SHOW MOTHER\'S DAY MARIACHI EVENT!',
+          description:'Familia! Get ready to celebrate all the beautiful mother\'s on this planet alongside an amazing menu of exquisite mexican recipes and the magical sounds of the great Mariachi Estrella!\n'+
+          '\n'+
+          'TACOS GOBERNADOR: A childhood favorite for Marcela & Carina! Slightly fried quesadilla filled with garlicky poblano and shrimp filling!\n'+
+          '\n'+
+          'BIRRIA QUESATACOS: All over the interwebs! This slow-braised Chile drenched shredded beef is broken down and simplified so you can reproduce one of Mexico\'s most iconic dishes at home. No need to build an outdoor pit!\n'+
+          '\n'+
+          '',
+          event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F132353945%2F496610908579%2F1%2Foriginal.20210415-185246?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C11%2C1280%2C640&s=ebb9e4a24afc8c0111919574e46e6ad1',
+          event_date: new Date(),
+          location: 'Online Event',
+          creater_id: 2,
+          createdAt: new Date(),
+          updatedAt: new Date()
+      },
+      {
+          id:9,
+          title:'Comedy Crossing: The Animal Crossing Standup Comedy Show',
+          description:'It\'s the world\'s first-ever Animal Crossing standup comedy show.\n'+
+          '\n'+
+          'And yes, ANYONE can watch this show online (in the world\'s CUTEST ZOOM MEETING) even if you do NOT play Animal Crossing. (I mean...anyone means anyone over 18 years old. This is STILL a grownup\'s comedy show)\n'+
+          '\n'+
+          '#ComedyCrossing is a free online standup comedy show held inside Animal Crossing, the world\'s cutest and most gentle video game. #TomNookIsOverParty #TomNookIsACrook\n'+
+          '\n'+
+          'As featured in The New York Times, New York Magazine\'s Vulture, Harper\'s Bazaar Magazine, Now This News, and Vulture\'s Good One podcast with Jesse Fox.',
+          event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F102937900%2F34743739568%2F1%2Foriginal.20200608-063252?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C91%2C400%2C200&s=547fad629624025e15ca0b9c18762f57',
+          event_date: new Date(),
+          location: 'Online Event',
+          creater_id: 1,
+          createdAt: new Date(),
+          updatedAt: new Date()
+      },
+      {
+        id:10,
+        title:'B&N Virtually Presents: Victoria Aveyard celebrates REALM BREAKER!',
+        description:'Barnes & Noble welcomes bestselling author, Victoria Aveyard, for a live virtual event to discuss REALM BREAKER, the stunning new fantasy series from the #1 New York Times bestselling author of the Red Queen series. Irresistibly action-packed and full of lethal surprises, this novel begins where hope is lost and asks: When the heroes have fallen, who will take up the sword?\n'+
+        '\n'+
+        'She will be in-conversation with special guest, Sabaa Tahir!\n'+
+        '\n'+
+        '',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F128401545%2F57848390869%2F1%2Foriginal.20210303-164720?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=95a69584899a027639dcc071a7ae0a5c',
+        event_date: new Date(),
+        location: 'Paris, France',
+        creater_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
+
     ], {});
   },
 

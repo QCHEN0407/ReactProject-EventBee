@@ -1,26 +1,37 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './EventPage.css';
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from 'react-redux';
-import { getEventById, getEvents } from '../../store/event'
+import { getEventById, getEvents, getTicketsByEventId } from '../../store/event'
 import GlobalFooter from "../Footer"
 import { useHistory, useParams } from "react-router-dom";
+import { Modal } from '../../context/Modal';
+import TicketPageModal from '../TicketPageModal';
 
 function EventPage() {
     const dispatch = useDispatch();
     const {eventId} = useParams();
     const event = useSelector(state => state.event.currentEvent);
     const events = useSelector(state => state.event.events);
+    const tickets = useSelector(state => state.event.tickets);
     const history = useHistory();
+    
+    const [showModal, setShowModal] = useState(false);
+
 
     useEffect(() => {
         dispatch(getEventById(eventId));
-        dispatch(getEvents())
+        dispatch(getEvents());
+        dispatch(getTicketsByEventId(eventId));
     }, [dispatch]);
 
     const toEventPage = (id) => {
         dispatch(getEventById(id));
         history.push(`/event/${id}`);
+    }
+
+    const displayModalAndSetTicketState = () => {
+        setShowModal(true);
     }
 
     if (!event) {
@@ -41,7 +52,13 @@ function EventPage() {
                     </h1>
                 </div>
                 <div className="buttonArea">
-                    <button className="ticketbtn" style={{cursor: 'pointer'}} type="submit">Tickets</button>
+                    <button className="ticketbtn" style={{cursor: 'pointer'}} onClick={displayModalAndSetTicketState}>Tickets</button>
+                    {
+                        showModal && (
+                        <Modal onClose={() => setShowModal(false)}>
+                            <TicketPageModal />
+                        </Modal>
+                    )}
                 </div>
 
                 <div className='eventDescription'>
@@ -53,7 +70,7 @@ function EventPage() {
 
                     {
                         events?.map(e => { return (
-                            <div style={{cursor: 'pointer'}} className="scroll_card" onClick={()=>{toEventPage(e.id)}} >
+                            <div key={e.id} style={{cursor: 'pointer'}} className="scroll_card" onClick={()=>{toEventPage(e.id)}} >
                                 <img className='cardImg' src={e.event_img} />
                                 <div className="cardTitle">
                                     {e.title}
@@ -64,9 +81,9 @@ function EventPage() {
                     }
 
             </div>
-            <div>
-            <GlobalFooter />
 
+            <div>
+                <GlobalFooter />
             </div>
         </div>
     );

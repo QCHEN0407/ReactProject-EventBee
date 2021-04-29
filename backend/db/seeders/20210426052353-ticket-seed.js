@@ -66,6 +66,51 @@ module.exports = {
           price: 0,
           createdAt: new Date(),
           updatedAt: new Date()
+        },
+        {
+          id:8,
+          event_id: 6,
+          title: 'General Admission',
+          description: 'Sales end on 5 Jun 2021',
+          price: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:9,
+          event_id: 7,
+          title: 'General Admission',
+          description: 'Sales end on 5 Jun 2021',
+          price: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:10,
+          event_id: 8,
+          title: 'General Admission',
+          description: 'Sales end on 5 Jun 2021',
+          price: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:11,
+          event_id: 9,
+          title: 'General Admission',
+          description: 'Sales end on 5 Jun 2021',
+          price: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:12,
+          event_id: 10,
+          title: 'General Admission',
+          description: 'Sales end on 5 Jun 2021',
+          price: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ], {});
 
