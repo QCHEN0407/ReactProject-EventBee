@@ -9,6 +9,7 @@ import Navigation from "./components/Navigation";
 import HomePage from "./components/HomePage";
 import EventPage from "./components/EventPage";
 import TicketPageModal from "./components/TicketPageModal";
+import MyEventsPage from "./components/MyEventsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/event/:eventId" exact>
             <EventPage />
+          </Route>
+          <Route path="/myEvents" exact>
+            <MyEventsPage />
           </Route>
         </Switch>
       )}

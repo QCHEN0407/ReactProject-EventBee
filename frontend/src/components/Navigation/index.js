@@ -13,10 +13,14 @@ function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
 
   const toLogin = () => {
-    history.push('/login')
+    history.push('/login');
   }
   const toHomepage = () => {
-    history.push('/')
+    history.push('/');
+  }
+
+  const toMyEvents = () => {
+    history.push('/myEvents');
   }
 
   const removeUser = () => {
@@ -28,17 +32,14 @@ function Navigation({ isLoaded }){
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
-      //<ProfileButton user={sessionUser} />
       <>
-        <button className='navbar_btn_login' style={{cursor: 'pointer'}}> My Events </button>
+        <button className='navbar_btn_login' onClick={toMyEvents} style={{cursor: 'pointer'}}> My Events </button>
         <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={removeUser}> Log Out </button>
       </>
     );
   } else {
     sessionLinks = (
       <>
-        {/* <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink> */}
         <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Host an event </button>
         <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Help </button>
         <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={toLogin}> Log In </button>
