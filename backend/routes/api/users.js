@@ -5,7 +5,7 @@ const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User } = require('../../db/models');
+const { User, Bookmark } = require('../../db/models');
 
 const router = express.Router();
 
@@ -44,5 +44,15 @@ router.post(
       });
     }),
   );
+
+  //Bookmark
+  router.get('/:id(\\d+)/bookmarkedEvents', asyncHandler(async (req,res) => {
+    let userId = parseInt(req.params.id, 10);
+    let bookmarkedEvents = await Bookmark.findAll({
+      where: {user_id:userId},
+    });
+    return res.json(bookmarkedEvents);
+
+  }));
 
 module.exports = router;

@@ -14,8 +14,8 @@
 }
 
 .blur-img {
-    filter: blur(30px);
-    -webkit-filter: blur(80px);
+    filter: blur(3px);
+    -webkit-filter: blur(50px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
