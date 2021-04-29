@@ -294,6 +294,33 @@ module.exports = {
         creater_id: 3,
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        id:11,
+        title:'Career Day',
+        description:'The Studio at TFD presents: Career Day At TFD, a digital summit to help you gain the confidence and skills to grow in your career!',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F124249165%2F223901959787%2F1%2Foriginal.20210126-195823?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=447e6f14b3e3fccc6adae51a878cc9ed',
+        event_date: new Date(),
+        location: 'New York',
+        creater_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id:12,
+        title:'The Beginner\'s Guide To Investing',
+        description:'BACK BY POPULAR DEMAND!\n'+
+        'One of our most popular and highly requested workshops is back! If you either missed the first \'The Beginner\'s Guide To Investing,\' or just need a refresher, this workshop is for you!\n'+
+        '\n'+
+        'For anyone who has been wanting to learn how to invest but hesitating to dive in, this is the interactive workshop for you.\n'+
+        '\n'+
+        'Join investing expert Amanda Holden as she breaks down everything you need to understand about the market, various types of investments, and how to get started on a solid plan (at any income level). As the market continues to evolve,\'s helpful to think long-term about your money, and this workshop will teach you how to do just that.',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F128049763%2F223901959787%2F1%2Foriginal.20210304-235713?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=cf58cd472769a301afb00f9568d1f103',
+        event_date: new Date(),
+        location: 'New York',
+        creater_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
 
     ], {});

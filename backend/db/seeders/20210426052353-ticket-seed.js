@@ -111,7 +111,35 @@ module.exports = {
           price: 0,
           createdAt: new Date(),
           updatedAt: new Date()
-        }
+        },
+        {
+          id:13,
+          event_id: 11,
+          title: 'General Admission',
+          description: 'Sales end on 5 Jun 2021',
+          price: 18,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:14,
+          event_id: 12,
+          title: 'General Admission',
+          description: 'Sales end on 9 Jun 2021',
+          price: 15,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:15,
+          event_id: 12,
+          title: 'VIP Ticket',
+          description: 'Sales end on 9 Jun 2021',
+          price: 29.99,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+
       ], {});
 
   },
