@@ -1,14 +1,15 @@
 
 .eventDetail{
-    margin-top: -200px;
+
     position: absolute;
     margin-left: 140px;
     margin-right: auto;
-    margin-top: -670px;
+    margin-top: -690px;
     height: 1000px;
     background-color: white;
     width: 1150px;
     align-content: center;
+    border-radius: 5px;
 
 }
 
@@ -30,7 +31,33 @@
     margin-left: auto;
     margin-right: auto;
 
+
 }
+.ticketArea{
+
+    display: flex;
+    height: 400px;
+    background-color: rgba(230, 230, 230, 0.9);
+    border-radius: 8px;
+
+}
+.ticketArea h1{
+    color:black;
+    font-size: 16px;
+    margin-left: 830px;
+    margin-right: 20px;
+    margin-top: 100px;
+
+
+    color: #1E0A3C;
+    font-weight: 530;
+    font-size: 20px;
+
+    letter-spacing: .5px;
+    word-break: break-word;
+
+}
+
 .buttonArea{
     position: absolute;
     top: 0;
@@ -72,16 +99,25 @@
     font-size: 15px;
     border-radius: 4px;
 }
-.eventTitle {
-    margin-top: 100px;
+/* .eventTitle {
+    margin-top: 400px;
     font-weight: bold;
-}
+} */
 
 .eventDescription {
-    margin-top: 100px;
-    max-width: 1000px;
+    margin-top: 120px;
+    max-width: 600px;
     font-style: italic;
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin-left: 130px;
+    position: relative;
 
+}
+.eventDescription h1 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 40px;
 }
 
 .scroll{
@@ -99,11 +135,12 @@
     margin-right: auto; */
     margin-bottom: 100px;
     width: 87%;
-    margin-top: 400px;
+    margin-top: 600px;
     /* justify-content: space-between;
     flex-wrap:wrap; */
     overflow: scroll;
     display: inline-flex;
+    position: relative;
 
 
 }
