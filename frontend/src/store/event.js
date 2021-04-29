@@ -2,7 +2,7 @@ import { csrfFetch } from './csrf';
 
 const LOAD_EVENTS = 'event/loadEvents';
 const BROWSE_EVENT = 'event/browseEvent';
-const GET_TICKETS = 'event/getTickets'
+const GET_TICKETS = 'event/getTickets';
 
 const loadEvents = (list) => {
     return {

@@ -32,6 +32,7 @@ function EventPage() {
 
     const displayModalAndSetTicketState = () => {
         setShowModal(true);
+        dispatch(getTicketsByEventId(eventId));
     }
 
     if (!event) {

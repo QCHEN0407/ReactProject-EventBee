@@ -29,13 +29,18 @@ function Navigation({ isLoaded }){
   if (sessionUser) {
     sessionLinks = (
       //<ProfileButton user={sessionUser} />
-      <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={removeUser}> Log Out </button>
+      <>
+        <button className='navbar_btn_login' style={{cursor: 'pointer'}}> My Events </button>
+        <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={removeUser}> Log Out </button>
+      </>
     );
   } else {
     sessionLinks = (
       <>
         {/* <NavLink to="/login">Log In</NavLink>
         <NavLink to="/signup">Sign Up</NavLink> */}
+        <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Host an event </button>
+        <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Help </button>
         <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={toLogin}> Log In </button>
       </>
     );
@@ -57,8 +62,8 @@ function Navigation({ isLoaded }){
         </div>
         <div className='navbar_right'>
           <div className='navbar_btn'>
-            <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Host an event </button>
-            <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Help </button>
+            {/* <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Host an event </button>
+            <button className='navbar_btn_login' style={{cursor: 'pointer'}}> Help </button> */}
             {/* <button className='navbar_btn_login' style={{cursor: 'pointer'}} onClick={toLogin}> Log In </button> */}
             {sessionLinks}
           </div>
