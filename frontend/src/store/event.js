@@ -2,6 +2,7 @@ import { csrfFetch } from './csrf';
 
 const LOAD_EVENTS = 'event/loadEvents';
 const BROWSE_EVENT = 'event/browseEvent';
+const GET_TICKETS = 'event/getTickets'
 
 const loadEvents = (list) => {
     return {
@@ -15,6 +16,13 @@ const browseEvent = (event) => {
     type: BROWSE_EVENT,
     payload: event,
   };
+}
+
+const getTickets = (tickets) => {
+  return {
+    type: GET_TICKETS,
+    payload:tickets
+  }
 }
 
 export const getEvents = () => async dispatch => {
@@ -35,6 +43,15 @@ export const getEventById = (id) => async dispatch => {
   }
 };
 
+export const getTicketsByEventId = (id) => async dispatch => {
+  const response = await csrfFetch(`/api/events/${id}/tickets`);
+
+  if (response.ok) {
+    const tickets = await response.json();
+    dispatch(getTickets(tickets));
+  }
+};
+
 const initialState = { events: [] };
 
 const eventReducer = (state = initialState, action) => {
@@ -47,6 +64,10 @@ const eventReducer = (state = initialState, action) => {
       case BROWSE_EVENT:
         newState = Object.assign({}, state);
         newState.currentEvent = action.payload;
+        return newState;
+      case GET_TICKETS:
+        newState = Object.assign({}, state);
+        newState.tickets = action.payload;
         return newState;
       default:
         return state;
