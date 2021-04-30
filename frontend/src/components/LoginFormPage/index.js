@@ -79,8 +79,7 @@ function LoginFormPage() {
         </form>
       </div>
       <div>
-        <GlobalFooter />
-
+          <footer className="login_footer"></footer>
       </div>
 
     </div>

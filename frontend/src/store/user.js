@@ -3,6 +3,7 @@ import { csrfFetch } from './csrf';
 const LOAD_BOOKMARKS = 'user/loadBookmarks';
 const ADD_BOOKMARK = 'user/addBookmarks';
 const DELETE_BOOKMARK = 'user/deleteBookmarks';
+const CLEAR_BOOKMARKS = 'user/clearBookmarks';
 
 const loadBookmarks = (bookmarks) => {
     return {
@@ -25,6 +26,12 @@ const deleteBookmarkAction = (user_id, event_id) => {
     }
 };
 
+
+const clearBookmarks = () => {
+    return {
+        type: CLEAR_BOOKMARKS
+    }
+}
 export const addBookmark = (userId, eventId) => async dispatch => {
     const response = await csrfFetch(`/api/bookmarks/create`, {
         method: 'post',
@@ -55,8 +62,14 @@ export const deleteBookmark = (userId, eventId) => async dispatch => {
     }
 }
 
-export const getBookmarksByUserId = (userId) => async dispatch => {
-    const response = await csrfFetch(`/api/users/${userId}/bookmarkedEvents`);
+export const getBookmarksByUserId = (user) => async dispatch => {
+
+    if(!user) {
+        dispatch(clearBookmarks());
+        return;
+    }
+
+    const response = await csrfFetch(`/api/users/${user.id}/bookmarkedEvents`);
 
     if (response.ok) {
         const bookmarks = await response.json();
@@ -82,6 +95,10 @@ const userReducer = (state = initialState, action) => {
         newState.bookmarks = state.bookmarks.filter(bookmark => {
             return !((bookmark.user_id === action.payload.user_id) && (bookmark.event_id === action.payload.event_id))
         });
+        return newState;
+      case CLEAR_BOOKMARKS:
+        newState = Object.assign({}, state);
+        newState.bookmarks = [];
         return newState;
       default:
         return state;

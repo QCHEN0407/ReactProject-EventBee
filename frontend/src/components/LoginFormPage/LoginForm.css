@@ -61,7 +61,10 @@ button:hover {
   opacity:1;
 }
 
-
+.login_footer{
+  color: #D1410C;
+  height: 50px;
+}
 
 
 /* Add padding to container elements */

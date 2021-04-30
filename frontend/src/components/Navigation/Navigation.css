@@ -184,10 +184,14 @@
   }
 
   footer{
-    padding: 20px;
+    padding: 150px;
     text-align: center;
-    background: rgba(2, 60, 64, .5);
-    margin-top: 20px;
+    /* background: rgba(2, 60, 64, .5); */
+    margin-top: -60px;
+    /* background-image: url('../../images/001.png'); */
+    background-repeat: no-repeat;
+    background-position: center;
+
 
   }
   .creators-foot{

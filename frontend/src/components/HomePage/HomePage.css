@@ -103,7 +103,7 @@ body {
     margin-right: auto;
     margin-bottom: 100px;
     width: 87%;
-    margin-top: 100px;
+    margin-top: 80px;
     justify-content: space-between;
     flex-wrap:wrap;
 
@@ -188,4 +188,24 @@ body {
     background:#1E0A3C;
     margin-top: -3px;
     margin-bottom: none;
+}
+.tagMenu{
+    margin-left: 150px;
+    text-align: left ;
+    margin-top: 15px;
+
+}
+.tagMenu_btn{
+    background-color: inherit;
+    border: none;
+    height: 30px;
+    width: 100px;
+    margin-right: 0px;
+    color: #6f7287;
+
+}
+.tagMenu_btn:hover {
+    border-bottom: black solid;
+    color:black;
+    border-width: 1px;
 }

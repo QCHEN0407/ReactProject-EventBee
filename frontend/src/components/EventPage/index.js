@@ -27,8 +27,12 @@ function EventPage() {
         dispatch(getEventById(eventId));
         dispatch(getEvents());
         dispatch(getTicketsByEventId(eventId));
-        dispatch(getBookmarksByUserId(sessionUser.id));
+        dispatch(getBookmarksByUserId(sessionUser));
     }, [dispatch]);
+
+    useEffect(() => {
+        dispatch(getBookmarksByUserId(sessionUser));
+    }, [sessionUser]);
 
     useEffect(() => {
         const script = document.createElement('script');
@@ -54,6 +58,10 @@ function EventPage() {
     }
 
     const LikeOrUnlike = () => {
+        if (!sessionUser) {
+            history.push('/login');
+            return;
+        }
         if (bookmarks.map(e=>e.event_id).includes(Number(eventId))) {
             dispatch(deleteBookmark(sessionUser.id, Number(eventId)));
         } else {
@@ -69,13 +77,13 @@ function EventPage() {
     if (bookmarks.map(e=>e.event_id).includes(Number(eventId))) {
        likeButton = (
         <>
-            <i class="fas fa-heart fa-2x fa-color" onClick={LikeOrUnlike}></i>
+            <i className="fas fa-heart fa-2x fa-color" onClick={LikeOrUnlike}></i>
         </>
         );
     } else {
         likeButton = (
         <>
-            <i class="fas fa-heart fa-2x fa-color-default" onClick={LikeOrUnlike}></i>
+            <i className="fas fa-heart fa-2x fa-color-default" onClick={LikeOrUnlike}></i>
         </>
         );
     }

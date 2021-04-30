@@ -38,6 +38,12 @@ function HomePage({isLoaded}) {
             <input className='second_search' type='search' placeholder="Online Events" />
             </div>
             <div className='tagMenu'>
+                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> All Events </button>
+                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> Free </button>
+                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> Food & Drinks </button>
+                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> Music </button>
+                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> Mother's Day </button>
+
 
             </div>
 
