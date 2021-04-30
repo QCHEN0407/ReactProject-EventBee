@@ -49,7 +49,11 @@ function EventPage() {
     const toEventPage = (id) => {
         dispatch(getEventById(id));
         history.push(`/event/${id}`);
-        window.scroll(0,0);
+        window.scroll({
+            top:0,
+            left:0,
+            behavior: 'smooth'
+        });
     }
 
     const displayModalAndSetTicketState = () => {
@@ -87,7 +91,6 @@ function EventPage() {
         </>
         );
     }
-
 
     return (
         <div>

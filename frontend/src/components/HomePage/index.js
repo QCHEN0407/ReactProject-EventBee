@@ -16,7 +16,12 @@ function HomePage({isLoaded}) {
     }, [dispatch]);
 
     const toEventPage = (id) => {
-        history.push(`/event/${id}`)
+        history.push(`/event/${id}`);
+        window.scroll({
+            top:0,
+            left:0,
+            behavior: 'smooth'
+        });
     }
 
  return(
