@@ -1,48 +1,89 @@
+.ticketContainer {
+    display: grid;
+    width: 700px;
+    height: 500px;
+    border-radius: 15px;
+    grid-template-columns: 4fr 3fr;
+    grid-template-areas: 'left right';
+    min-height: 0;
+    min-width: 0;
+}
+
+.leftTicketContainer {
+    grid-area: left;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 'left_top'
+                         'left_down';
+}
+
+.eventTitle {
+    grid-area: left_top;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
 .ticketpagemodal_form {
-    width: 1000px;
-    height: 400px;
-    position: relative;
-
-}
-.eventTitle{
-
-    /* border-right: black solid; */
-    height: 70px;
-    width: 63%;
-    border-bottom-style: solid;
-    border-bottom-color: #eeedf2;
+    grid-area: left_down;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+    margin-left: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
-.ticket_right{
-
+.rightTicketContainer {
+    grid-area: right;
+    overflow: hidden;
+    min-width: 0;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas: 'right_top'
+                         'right_down';
+    min-height: 0;  /* NEW */
+    border-left: grey solid;
 }
 
-.ticket-img{
-    width: 37%;
-    height: 60%;
-    margin-top: -70px;
-    margin-left: 63%;
-
+.ticket-img {
+    grid-area: right_top;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
 }
 
-.shopCart{
-    border-left-style: solid;
-    border-left-color: #eeedf2;
-    height: 403px;
-    width: 100px;
-    margin-left: 63%;
-    margin-top: -54px;
-
-}
-
-.ticketList{
+.actual-img {
+    max-width: 100%;
+    max-height: 100%;
 
 }
 
-.ticketpagemodal_form{
-
+.shopCart {
+    grid-area: right_down;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
 }
 
-.checkoutBtn{
+.checkoutBtn {
+    margin-bottom: 10px;
+}
+
+.ticketItem {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.selectQuantityButton {
 
 }

@@ -15,26 +15,38 @@ function TicketPageModal() {
     };
 
     return (
-      <div>
-      <div className="eventTitle">Event Title</div>
-      <div className="ticket_right">
-        <img className="ticket-img" src={event.event_img} alt=""/>
-        <div className="shopCart"></div>
-      </div>
-      <div className="ticketList">
-        <form className='ticketpagemodal_form' onSubmit={handleSubmit}>
-          {tickets?.map(ticket => {return (
-              <div>
-                <div>{ticket.title}</div>
-                <div>{ticket.price}</div>
-                <div>{ticket.description}</div>
-              </div>
-          )})}
+      <div className='ticketContainer'>
+        <div className="leftTicketContainer">
+          <div className='eventTitle'>
+            {event.title}
+          </div>
+          <div className="ticketList">
+            <form className='ticketpagemodal_form' onSubmit={handleSubmit}>
+              {tickets?.map(ticket => {return (
+                  <div className="ticketItem">
+                    <div>
+                      <div>{ticket.title}</div>
+                      <div>${ticket.price}</div>
+                      <div>{ticket.description}</div>
+                    </div>
+                    <button id={`button_ticket_${ticket.id}`} className="selectQuantityButton">
+                        select quantity
+                    </button>
+                  </div>
+              )})}
 
-          <button className="checkoutBtn" type="submit">Checkout</button>
-        </form>
+              <button className="checkoutBtn" type="submit">Checkout</button>
+            </form>
 
-      </div>
+          </div>
+        </div>
+        <div className="rightTicketContainer">
+          <div className="ticket-img">
+            <img className="actual-img" src={event.event_img} alt=""/>
+          </div>
+          <div className="shopCart"></div>
+        </div>
+
       </div>
     );
 }
