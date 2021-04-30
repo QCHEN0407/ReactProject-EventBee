@@ -11,17 +11,19 @@ router.post('/create', asyncHandler(async (req, res) => {
         user_id,
         event_id,
     });
-    return res.json(`Successfully Bookmarked ${event_id} for User: ${user_id}`);
+    return res.json(newBookmark);
 }));
 
 
-router.post('/delete', asyncHandler(async (req, res) => {
+router.delete('/delete', asyncHandler(async (req, res) => {
     const {user_id, event_id} = req.body;
     const deletedBookmark = await Bookmark.destroy({
-        user_id,
-        event_id,
+        where: {
+            user_id,
+            event_id,
+        }
     });
-    return res.json(`Successfully Removed Bookmark ${event_id} for User: ${user_id}`);
+    return res.json({user_id, event_id});
 }));
 
 module.exports = router;

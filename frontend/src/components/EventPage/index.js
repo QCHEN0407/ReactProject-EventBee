@@ -7,6 +7,7 @@ import GlobalFooter from "../Footer"
 import { useHistory, useParams } from "react-router-dom";
 import { Modal } from '../../context/Modal';
 import TicketPageModal from '../TicketPageModal';
+import { getBookmarksByUserId, deleteBookmark, addBookmark } from '../../store/user';
 
 function EventPage() {
     const dispatch = useDispatch();
@@ -14,18 +15,19 @@ function EventPage() {
     const event = useSelector(state => state.event.currentEvent);
     const events = useSelector(state => state.event.events);
     const tickets = useSelector(state => state.event.tickets);
+    const bookmarks = useSelector(state => state.user.bookmarks);
+    const sessionUser = useSelector(state => state.session.user);
     const history = useHistory();
 
     const [showModal, setShowModal] = useState(false);
 
-    useEffect(() => {
-        window.scroll(0,0);
-    },[]);
+    let likeButton;
 
     useEffect(() => {
         dispatch(getEventById(eventId));
         dispatch(getEvents());
         dispatch(getTicketsByEventId(eventId));
+        dispatch(getBookmarksByUserId(sessionUser.id));
     }, [dispatch]);
 
     useEffect(() => {
@@ -34,16 +36,16 @@ function EventPage() {
         script.crossorigin="anonymous";
         script.async = true;
         document.body.appendChild(script);
+
         return () => {
           document.body.removeChild(script);
         }
     }, []);
 
-
-
     const toEventPage = (id) => {
         dispatch(getEventById(id));
         history.push(`/event/${id}`);
+        window.scroll(0,0);
     }
 
     const displayModalAndSetTicketState = () => {
@@ -52,12 +54,32 @@ function EventPage() {
     }
 
     const LikeOrUnlike = () => {
+        if (bookmarks.map(e=>e.event_id).includes(Number(eventId))) {
+            dispatch(deleteBookmark(sessionUser.id, Number(eventId)));
+        } else {
+            dispatch(addBookmark(sessionUser.id, Number(eventId)));
+        }
         document.querySelector(".fas").classList.toggle("fa-color");
     }
 
-    if (!event) {
+    if (!event || !bookmarks) {
         return null;
     }
+
+    if (bookmarks.map(e=>e.event_id).includes(Number(eventId))) {
+       likeButton = (
+        <>
+            <i class="fas fa-heart fa-2x fa-color" onClick={LikeOrUnlike}></i>
+        </>
+        );
+    } else {
+        likeButton = (
+        <>
+            <i class="fas fa-heart fa-2x fa-color-default" onClick={LikeOrUnlike}></i>
+        </>
+        );
+    }
+
 
     return (
         <div>
@@ -73,8 +95,9 @@ function EventPage() {
                     </h1>
                 </div>
                 <div className="buttonArea">
-                <i class="fas fa-heart fa-2x fa-color-default" onClick={LikeOrUnlike}></i>
-                <p className="heartMessage">Bookmark this Event</p>
+                    {likeButton}
+
+                    <p className="heartMessage">Bookmark this Event</p>
 
                     <button className="ticketbtn" style={{cursor: 'pointer'}} onClick={displayModalAndSetTicketState}>Tickets</button>
                     {
