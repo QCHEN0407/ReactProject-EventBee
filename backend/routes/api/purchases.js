@@ -5,7 +5,7 @@ const { Event, Ticket, Registration } = require('../../db/models');
 
 const router = express.Router();
 
-router.post('/', asyncHandler(async (req, res) => {
+router.post('/create', asyncHandler(async (req, res) => {
     const { user_id, ticket_id, quantity } = req.body;
     const registration = await Registration.create({
         user_id,
