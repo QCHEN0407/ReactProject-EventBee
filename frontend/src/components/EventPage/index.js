@@ -68,7 +68,8 @@ function EventPage() {
                     </h1>
                 </div>
                 <div className="buttonArea">
-
+                <i class="fas fa-heart fa-2x fa-color-default" onClick={LikeOrUnlike}></i>
+                <p className="heartMessage">Bookmark this Event</p>
 
                     <button className="ticketbtn" style={{cursor: 'pointer'}} onClick={displayModalAndSetTicketState}>Tickets</button>
                     {
@@ -84,7 +85,6 @@ function EventPage() {
                     {event.description}
                 </div>
 
-                <i class="fas fa-heart fa-3x fa-color" onClick={LikeOrUnlike}></i>
 
             </div>
             <div className="scroll">

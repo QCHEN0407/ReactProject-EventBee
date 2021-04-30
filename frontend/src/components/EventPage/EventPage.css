@@ -84,7 +84,7 @@
     color: #FFF;
     background-color: #0D8547;
     margin-left: 810px;
-
+    margin-top: -65px;
     display: inline-block;
 
     zoom: 1;
@@ -195,7 +195,19 @@
 /* .cardTitle title{
     font-size: 14px;
 } */
-
+.fa-color-default {
+    color: rgb(175, 166, 169);
+}
 .fa-color {
     color: palevioletred;
+}
+
+.fa-heart{
+    margin-top: 8px;
+    margin-left: 33px;
+}
+.heartMessage{
+    display: flex;
+    margin-top: -20px;
+    margin-left: 80px;
 }
