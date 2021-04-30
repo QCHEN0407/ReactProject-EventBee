@@ -73,7 +73,7 @@
 }
 
 .checkoutBtn {
-    margin-bottom: 10px;
+
 }
 
 .ticketItem {
@@ -85,5 +85,6 @@
 }
 
 .selectQuantityButton {
-
+    width: 50px;
+    height: 30px;
 }
