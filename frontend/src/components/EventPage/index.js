@@ -18,6 +18,9 @@ function EventPage() {
 
     const [showModal, setShowModal] = useState(false);
 
+    useEffect(() => {
+        window.scroll(0,0);
+    },[]);
 
     useEffect(() => {
         dispatch(getEventById(eventId));
@@ -34,7 +37,9 @@ function EventPage() {
         return () => {
           document.body.removeChild(script);
         }
-      }, []);
+    }, []);
+
+
 
     const toEventPage = (id) => {
         dispatch(getEventById(id));

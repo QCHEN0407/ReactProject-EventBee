@@ -5,7 +5,7 @@ const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User, Bookmark } = require('../../db/models');
+const { User, Bookmark, Registration } = require('../../db/models');
 
 const router = express.Router();
 
@@ -31,28 +31,37 @@ const validateSignup = [
 
 // Sign up
 router.post(
-    '',
-    validateSignup,
-    asyncHandler(async (req, res) => {
-      const { email, password, username } = req.body;
-      const user = await User.signup({ email, username, password });
+  '',
+  validateSignup,
+  asyncHandler(async (req, res) => {
+    const { email, password, username } = req.body;
+    const user = await User.signup({ email, username, password });
 
-      await setTokenCookie(res, user);
+    await setTokenCookie(res, user);
 
-      return res.json({
-        user,
-      });
-    }),
-  );
-
-  //Bookmark
-  router.get('/:id(\\d+)/bookmarkedEvents', asyncHandler(async (req,res) => {
-    let userId = parseInt(req.params.id, 10);
-    let bookmarkedEvents = await Bookmark.findAll({
-      where: {user_id:userId},
+    return res.json({
+      user,
     });
-    return res.json(bookmarkedEvents);
+  }),
+);
 
-  }));
+//Bookmark
+router.get('/:id(\\d+)/bookmarkedEvents', asyncHandler(async (req,res) => {
+  let userId = parseInt(req.params.id, 10);
+  let bookmarkedEvents = await Bookmark.findAll({
+    where: {user_id:userId},
+  });
+  return res.json(bookmarkedEvents);
+
+}));
+
+router.get('/:id(\\d+)/purchasedTickets', asyncHandler(async (req,res) => {
+  let userId = parseInt(req.params.id, 10);
+  let purchasedTickets = await Registration.findAll({
+    where: {user_id:userId},
+  });
+  return res.json(purchasedTickets);
+
+}));
 
 module.exports = router;
