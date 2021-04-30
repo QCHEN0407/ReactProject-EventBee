@@ -1,9 +1,16 @@
 .ticketpagemodal_form {
     width: 1000px;
-    height: 600px;
+    height: 400px;
+    position: relative;
+
 }
 .eventTitle{
 
+    /* border-right: black solid; */
+    height: 70px;
+    width: 63%;
+    border-bottom-style: solid;
+    border-bottom-color: #eeedf2;
 }
 
 .ticket_right{
@@ -11,10 +18,20 @@
 }
 
 .ticket-img{
+    width: 37%;
+    height: 60%;
+    margin-top: -70px;
+    margin-left: 63%;
 
 }
 
 .shopCart{
+    border-left-style: solid;
+    border-left-color: #eeedf2;
+    height: 403px;
+    width: 100px;
+    margin-left: 63%;
+    margin-top: -54px;
 
 }
 

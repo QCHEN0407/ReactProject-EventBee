@@ -19,19 +19,21 @@ function TicketPageModal() {
       <div className="eventTitle">Event Title</div>
       <div className="ticket_right">
         <img className="ticket-img" src={event.event_img} alt=""/>
-        <div className="shopCart">Shop Cart</div>
+        <div className="shopCart"></div>
       </div>
       <div className="ticketList">
         <form className='ticketpagemodal_form' onSubmit={handleSubmit}>
           {tickets?.map(ticket => {return (
               <div>
-                  {ticket.title}
-                  {ticket.price}
-                  {ticket.description}
+                <div>{ticket.title}</div>
+                <div>{ticket.price}</div>
+                <div>{ticket.description}</div>
               </div>
           )})}
-          <button type="submit">Checkout</button>
+
+          <button className="checkoutBtn" type="submit">Checkout</button>
         </form>
+
       </div>
       </div>
     );
