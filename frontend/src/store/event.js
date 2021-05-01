@@ -3,6 +3,7 @@ import { csrfFetch } from './csrf';
 const LOAD_EVENTS = 'event/loadEvents';
 const BROWSE_EVENT = 'event/browseEvent';
 const GET_TICKETS = 'event/getTickets';
+const FILTER_EVENTS = 'event/filterEvents';
 
 const loadEvents = (list) => {
     return {
@@ -23,6 +24,13 @@ const getTickets = (tickets) => {
     type: GET_TICKETS,
     payload:tickets
   }
+}
+
+const filterEventsAction = (events) => {
+  return {
+    type: FILTER_EVENTS,
+    payload: events,
+  };
 }
 
 export const getEvents = () => async dispatch => {
@@ -52,6 +60,16 @@ export const getTicketsByEventId = (id) => async dispatch => {
   }
 };
 
+
+export const filterEventsByCategoryId = (categoryId) => async dispatch => {
+  const response = await csrfFetch(`/api/events/category/${categoryId}`);
+
+  if (response.ok) {
+    const events = await response.json();
+    dispatch(filterEventsAction(events));
+  }
+};
+
 const initialState = { events: [] };
 
 const eventReducer = (state = initialState, action) => {
@@ -68,6 +86,10 @@ const eventReducer = (state = initialState, action) => {
       case GET_TICKETS:
         newState = Object.assign({}, state);
         newState.tickets = action.payload;
+        return newState;
+      case FILTER_EVENTS:
+        newState = Object.assign({}, state);
+        newState.events = action.payload;
         return newState;
       default:
         return state;

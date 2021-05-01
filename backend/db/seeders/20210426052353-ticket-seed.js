@@ -139,6 +139,87 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()
         },
+        {
+          id:16,
+          event_id: 13,
+          title: 'Mother\'s Day Bingo Party!!! - 3 Strip',
+          description: 'Sales end on 9 Jun 2021',
+          price: 45.00,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:17,
+          event_id: 14,
+          title: 'General Admission',
+          description: 'Sales end on 9 Jun 2021',
+          price: 39.90,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:18,
+          event_id: 14,
+          title: 'Early Bird',
+          description: 'Sales end on 9 May 2021',
+          price: 29.90,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:19,
+          event_id: 15,
+          title: 'Free Registration',
+          description: 'Sales end on 9 May 2021',
+          price: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:20,
+          event_id: 16,
+          title: 'Free Registration',
+          description: 'Sales end on 9 May 2021',
+          price: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:21,
+          event_id: 17,
+          title: 'General Admission',
+          description: 'Sales end on 9 May 2021',
+          price: 15,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:22,
+          event_id: 18,
+          title: 'General Admission',
+          description: 'Sales end on 9 May 2021',
+          price: 5,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:23,
+          event_id: 19,
+          title: 'General Admission',
+          description: 'Sales end on 15 May 2021',
+          price: 15,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:24,
+          event_id: 20,
+          title: 'Free Registration',
+          description: 'Sales end on 10 May 2021',
+          price: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
 
       ], {});
 

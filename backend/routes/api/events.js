@@ -1,7 +1,7 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 
-const { Event, Ticket } = require('../../db/models');
+const { Event, Ticket, Tag } = require('../../db/models');
 
 const router = express.Router();
 
@@ -11,6 +11,20 @@ router.get('/', asyncHandler(async (req, res) => {
 
     return res.json(events);
 }));
+
+
+router.get('/category/:categoryId', asyncHandler(async (req, res) => {
+
+    let categoryId = parseInt(req.params.categoryId, 10);
+    let tags = await Tag.findAll({
+        where: {category_id: categoryId},
+        include: {model: Event}
+    });
+
+    return res.json(tags.map(tag => tag.Event));
+}));
+
+
 
 router.get('/:id(\\d+)', asyncHandler(async (req, res) => {
 
