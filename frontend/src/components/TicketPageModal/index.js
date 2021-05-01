@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory, useParams, Redirect } from "react-router-dom";
 import './TicketPageModal.css';
 
 
@@ -9,9 +10,26 @@ function TicketPageModal() {
     const dispatch = useDispatch();
     const tickets = useSelector(state => state.event.tickets);
     const event = useSelector(state => state.event.currentEvent);
+    const sessionUser = useSelector(state => state.session.user);
+    const history = useHistory();
 
     const handleSubmit = (e) => {
-      e.preventDefault();
+        
+        e.preventDefault();
+
+        if (!sessionUser) {
+            history.push('/login');
+            return;
+        }
+
+        const elements = document.querySelectorAll(".selectQuantityButton");
+        elements.forEach(e => {
+            console.log(typeof Number(e.id));
+            console.log(typeof sessionUser.id);
+            console.log(typeof Number(e.value));
+        })
+        history.push('/');
+        
     };
 
     return (
@@ -29,7 +47,8 @@ function TicketPageModal() {
                     <div>${ticket.price}</div>
                     <div>{ticket.description}</div>
                   </div>
-                  <select id="" className="selectQuantityButton">
+                  <select id={ticket.id} className="selectQuantityButton">
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

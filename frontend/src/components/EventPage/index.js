@@ -69,7 +69,7 @@ function EventPage() {
         if (bookmarks.map(e=>e.event_id).includes(Number(eventId))) {
             dispatch(deleteBookmark(sessionUser.id, Number(eventId)));
         } else {
-            dispatch(addBookmark(sessionUser.id, Number(eventId)));
+            dispatch(addBookmark(sessionUser, Number(eventId)));
         }
         document.querySelector(".fas").classList.toggle("fa-color");
     }

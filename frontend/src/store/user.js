@@ -32,18 +32,20 @@ const clearBookmarks = () => {
         type: CLEAR_BOOKMARKS
     }
 }
-export const addBookmark = (userId, eventId) => async dispatch => {
+export const addBookmark = (user, eventId) => async dispatch => {
     const response = await csrfFetch(`/api/bookmarks/create`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({user_id: userId, event_id: eventId})
+        body: JSON.stringify({user_id: user.id, event_id: eventId})
     });
 
-    if (response.ok) {
-        const bookmark = await response.json();
-        dispatch(addBookmarkAction(bookmark));
+    const response1 = await csrfFetch(`/api/users/${user.id}/bookmarkedEvents`);
+
+    if (response1.ok) {
+        const bookmarks = await response1.json();
+        dispatch(loadBookmarks(bookmarks));
     }
 }
 
