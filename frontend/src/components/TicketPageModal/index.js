@@ -12,11 +12,11 @@ function TicketPageModal() {
     const tickets = useSelector(state => state.event.tickets);
     const event = useSelector(state => state.event.currentEvent);
     const sessionUser = useSelector(state => state.session.user);
-    
+
     const history = useHistory();
 
     const handleSubmit = (e) => {
-        
+
         e.preventDefault();
 
         if (!sessionUser) {
@@ -33,7 +33,7 @@ function TicketPageModal() {
             }
         });
         history.push('/');
-        
+
     };
 
     return (
@@ -68,6 +68,9 @@ function TicketPageModal() {
 
         </div>
         <div className="rightTicketContainer">
+        {/* <button type="button" class="close" data-dismiss="modal">
+                            ×
+        </button> */}
           <div className="ticket-img">
             <img className="actual-img" src={event.event_img} alt=""/>
           </div>
