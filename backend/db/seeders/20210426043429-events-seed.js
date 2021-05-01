@@ -321,6 +321,142 @@ module.exports = {
         creater_id: 3,
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        id:13,
+        title:'Mother\'s Day - Bingo Party',
+        description:'Join us for a Mother\'s Day Party - Bingo style. We have GRAND A GAME KICKED UP with a $17,500 Prizeboard & 30 DOOR PRIZES all night',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F131498267%2F458345807830%2F1%2Foriginal.20210407-203435?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=69c642be3b95cdc3bbdeebf6b4449011',
+        event_date: new Date(),
+        location: 'Online Event',
+        creater_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id:14,
+        title:'Mother\'s Day Love Cake',
+        description:'Join me and learn all the secrets to make this stunning decorated cake for the most important person in your life.\n'+
+        '\n'+
+        'You will lear how to make:\n'+
+        '\n'+
+        'Chocolate Cake: The perfect recipe for a decorated cake. Moist, delicious, and with right texture and consistency for a cake to decorate.\n'+
+        '\n'+
+        'Swiss Meringue Buttercream: A silky, shiny, and not too sweet buttercream perfect to decorate cake and cupcakes.\n'+
+        '\n'+
+        'Cake Decorating: How to fill and decorate a cake. How to handle a piping bag and the different kind of tips to use to achieve this elegant and beautifully decorated cake.\n'+
+        '\n'+
+        '',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F131038195%2F172125007556%2F1%2Foriginal.20210402-170053?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C67%2C1920%2C960&s=fdf8ae24b5a576e3903fdbe51e60db35',
+        event_date: new Date(),
+        location: 'Dallas, TX',
+        creater_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id:15,
+        title:'Virtual Mother\'s Day Run & Walk',
+        description:'Outrun family homelessness this Mother\'s Day: join the 2021 Virtual Mother\'s Day Run & Walk benefitting children and their parents at Pajaro Valley Shelter Services. At PVSS, families are working harder than ever before to outrun the pandemic - facing increased financial hardship and housing insecurity head-on. This year\'s virtual event will support the growing needs of families experiencing homelessness in the Pajaro Valley. Join us in building hopeful family futures!\n'+
+        '\n'+
+        'Help PVSS raise $80k by Mother\'s Day: Sustain the hope and efforts of the 136 children and their parents in PVSS\' care. Self-sufficient families are the backbone of our community. Let\'s keep our community strong!',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F128035055%2F513364564951%2F1%2Foriginal.20210304-214058?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C4800%2C2400&s=7ef6231e238bdfa91d345125331d72f1',
+        event_date: new Date(),
+        location: 'Austin, TX',
+        creater_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id:16,
+        title:'The Timeless Genius of Chopin',
+        description:'The Sage Chamber Music Society presents The Timeless Genius of Chopin, a series of four virtual recitals of piano works by Frédéric Chopin (1810-1849), performed by Jiayan Sun. The concerts will be live-streamed on Thursdays at 8 PM from Sweeney Concert Hall, Smith College.\n'+
+        '\n'+
+        'March 4, 2021 - II. The Complete Ballades, Selected Mazurkas, and the Second Sonata\n'+
+        '\n'+
+        'April 8, 2021 - III. The Complete Scherzos, Selected Nocturnes, and the Third Sonata\n'+
+        '\n'+
+        'May 6, 2021 - IV. The Complete Preludes, Selected Late and Other Works',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F125694371%2F479275886939%2F1%2Foriginal.20210210-014026?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C20%2C1280%2C640&s=60bd9398602f0cd65a0f49e1f1e83d38',
+        event_date: new Date(),
+        location: 'Sweden',
+        creater_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id:17,
+        title:'Piano Star Skills Builder Webinar',
+        description:'Join bestselling authors David Blackwell and Karen Marshall for a FREE webinar introducing the latest title in the ABRSM Piano Star series: Piano Star Skills Builder. The Skills Builder book develops musicianship skills for young pianists who are working towards Initial Grade (or playing at this level) and beyond. It’s packed with engaging, musical pieces, games and exercises, all carefully designed to make clear links between repertoire, scales, sight-reading and aural skills. The webinar will include:',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F132943755%2F241978384170%2F1%2Foriginal.20210421-171111?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c99a547e7014c22daa38653ff767fc54',
+        event_date: new Date(),
+        location: 'Online Event',
+        creater_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id:18,
+        title:'Cheddar & Chives - New YouTube Series - Free Workshop',
+        description:'Join me for this new YouTube Series . All about savory recipes perfect for brunch, picnic or barbecue. Learn how to make those incredible Cheddar Cheese & Chives drop biscuits. You will love making them because they’re quick and will satisfy all your carb cravings.\n'+
+        '\n'+
+        'Get your free ticket and you will be receiving the recipe in your inbox, starting on Thursday, May 13th.\n'+
+        '\n'+
+        'This workshop will be Live on YouTube only and it is FREE. Click below to Subscribe and don\'t forget to hit the notification bell! : ) https://www.youtube.com/channel/UC2DHFoLy7Kav4H_eoqEfkBQ\n'+
+        '\n'+
+        'You are welcome to support the page and the upcoming events by sharing this workshop with friends and family. Thank you in advance for your support!\n'+
+        '\n'+
+        'If you have any questions you can contact me at team.bakeitup@gmail.com.',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F129758437%2F172125007556%2F1%2Foriginal.20210321-181416?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C60%2C1920%2C960&s=ac1db65ad9744586a08a25790711442b',
+        event_date: new Date(),
+        location: 'Online Event',
+        creater_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id:19,
+        title:'Baking from Scratch 101',
+        description:'ALL SESSIONS ARE ON INSTAGRAM LIVE! Schedule subject to change:\n'+
+        '\n'+
+        'February 4: Rolling out puff pastry. Come ready with your "détrempe!" so we can get rolling! Instructions and ingredient list here.\n'+
+        'March 4: Tough times pantry cookies - and puff pastry principles reviewed so you can make our Croissant Chips at home!\n'+
+        'April 1: Mystery recipe using Croissant Chips - REVEALED! Pastry Chef Caroline Schiff will show us how to make Slow Up Granola using hazelnuts - and some Croissant Chips thrown in! Ingredient list here.\n'+
+        'May 6: WE ALL SCREAM FOR ICE CREAM! Cookie Square/Croissant Chip ice cream with Tiffany Schleigh - yes please. Ingredients and tools here.\n'+
+        'June 3: TBD!\n'+
+        'July 1: TBD!\n'+
+        'NO AUGUST SESSION\n'+
+        'September 2: TBD!\n'+
+        'We will confirm the recipe and send instructions closer to each date.',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F124377153%2F199607744421%2F1%2Foriginal.20210127-210812?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=1%2C0%2C620%2C310&s=02f65d1569df56733968c8741147a40b',
+        event_date: new Date(),
+        location: 'Online Event',
+        creater_id: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id:20,
+        title:'Mini Pizzette - Free Workshop',
+        description:'A little taste of Italy! These wonderful handheld appetizers are served in Italy for aperitivo! Add your favorite topping and you have your best appetizer!. Join me and learn how to make Pizzette . The perfect recipe for your next party!\n'+
+        '\n'+
+        'Get your free ticket to receive the recipe in your inbox a few days before the event.\n'+
+        '\n'+
+        'This workshop will be Live on YouTube and it is FREE. Click below to Subscribe and don\'t forget to hit the notification bell! : ) https://www.youtube.com/channel/UC2DHFoLy7Kav4H_eoqEfkBQ\n'+
+        '\n'+
+        'You are welcome to support the page and the upcoming events by sharing this workshop with friends and family. Thank you in advance for your support!\n'+
+        '\n'+
+        'If you have any questions you can contact me at team.bakeitup@gmail.com.\n'+
+        '\n'+
+        'Ciao! : )\n'+
+        '\n'+
+        'Lorena',
+        event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F130301533%2F172125007556%2F1%2Foriginal.20210326-034923?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C60%2C1920%2C960&s=ecf9ba24ab455a6cc515d0cfe71f78b8',
+        event_date: new Date(),
+        location: 'Online Event',
+        creater_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
 
     ], {});

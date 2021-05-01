@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './HomePage.css';
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from 'react-redux';
-import { getEventById, getEvents } from '../../store/event'
+import { getEventById, getEvents, filterEventsByCategoryId } from '../../store/event'
 import { useHistory } from "react-router-dom";
 
 function HomePage({isLoaded}) {
@@ -24,6 +24,16 @@ function HomePage({isLoaded}) {
         });
     }
 
+
+    const getEventsByCategoryId = (categoryId) => {
+        if(categoryId === 0) {
+            dispatch(getEvents());
+        } else {
+            dispatch(filterEventsByCategoryId(categoryId));
+        }
+        
+    }
+
  return(
     <div>
         <Navigation isLoaded={isLoaded}/>
@@ -43,11 +53,11 @@ function HomePage({isLoaded}) {
             <input className='second_search' type='search' placeholder="Online Events" />
             </div>
             <div className='tagMenu'>
-                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> All Events </button>
-                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> Free </button>
-                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> Food & Drinks </button>
-                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> Music </button>
-                <button className='tagMenu_btn' style={{cursor: 'pointer'}}> Mother's Day </button>
+                <button className='tagMenu_btn' onClick={() => {getEventsByCategoryId(0)}} style={{cursor: 'pointer'}}> All Events </button>
+                <button className='tagMenu_btn' onClick={() => {getEventsByCategoryId(4)}} style={{cursor: 'pointer'}}> Online Events </button>
+                <button className='tagMenu_btn' onClick={() => {getEventsByCategoryId(2)}} style={{cursor: 'pointer'}}> Food & Drinks </button>
+                <button className='tagMenu_btn' onClick={() => {getEventsByCategoryId(1)}} style={{cursor: 'pointer'}}> Music </button>
+                <button className='tagMenu_btn' onClick={() => {getEventsByCategoryId(7)}} style={{cursor: 'pointer'}}> Mother's Day </button>
 
 
             </div>
