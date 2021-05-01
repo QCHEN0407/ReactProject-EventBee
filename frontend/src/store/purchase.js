@@ -1,7 +1,6 @@
 import { csrfFetch } from './csrf';
 
 const LOAD_PURCHASES = 'purchase/loadPurchases';
-const ADD_PURCHASE = 'purchase/addPurchase';
 
 const loadPurchasesAction = (purchases) => {
     return {
@@ -9,13 +8,6 @@ const loadPurchasesAction = (purchases) => {
         payload: purchases
     }
 };
-
-// const addPurchaseAction = (purchase) => {
-//     return {
-//         type: ADD_PURCHASE,
-//         payload:purchase
-//     }
-// };
 
 export const getPurchasesByUser = (user) => async dispatch => {
 
@@ -36,8 +28,11 @@ export const addPurchase = (user, ticketId, quantity) => async dispatch => {
         body: JSON.stringify({user_id: user.id, ticket_id: ticketId, quantity:quantity})
     });
 
-    if (response.ok) {
-        getPurchasesByUser(user);
+    const response1 = await csrfFetch(`/api/users/${user.id}/purchasedTickets`);
+
+    if (response1.ok) {
+        const purchases = await response1.json();
+        dispatch(loadPurchasesAction(purchases));
     }
 }
 
