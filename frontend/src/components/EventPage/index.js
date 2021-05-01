@@ -49,7 +49,11 @@ function EventPage() {
     const toEventPage = (id) => {
         dispatch(getEventById(id));
         history.push(`/event/${id}`);
-        window.scroll(0,0);
+        window.scroll({
+            top:0,
+            left:0,
+            behavior: 'smooth'
+        });
     }
 
     const displayModalAndSetTicketState = () => {
@@ -65,7 +69,7 @@ function EventPage() {
         if (bookmarks.map(e=>e.event_id).includes(Number(eventId))) {
             dispatch(deleteBookmark(sessionUser.id, Number(eventId)));
         } else {
-            dispatch(addBookmark(sessionUser.id, Number(eventId)));
+            dispatch(addBookmark(sessionUser, Number(eventId)));
         }
         document.querySelector(".fas").classList.toggle("fa-color");
     }
@@ -87,7 +91,6 @@ function EventPage() {
         </>
         );
     }
-
 
     return (
         <div>
