@@ -38,10 +38,10 @@ function MyEventsPage() {
             <div class="bookmarked_events">
                 {
                     bookmarkedEvents?.map(e =>  { return (
-                        <div style={{cursor: 'pointer'}} className="card" onClick={()=>{toEventPage(e.id)}}>
-                            <img className='image' src={e.event_img} alt="picture" />
+                        <div style={{cursor: 'pointer'}} className="card" onClick={()=>{toEventPage(e.Event.id)}}>
+                            <img className='image' src={e.Event.event_img} alt="picture" />
                             <div className="container">
-                                {e.title}
+                                {e.Event.title}
                             </div>
                         </div>
                         )
