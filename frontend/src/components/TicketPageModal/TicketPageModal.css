@@ -1,13 +1,17 @@
 .ticketContainer {
     display: grid;
-    width: 700px;
-    height: 500px;
+    width: 900px;
+    height: 550px;
     border-radius: 15px;
     grid-template-columns: 4fr 3fr;
     grid-template-areas: 'left right';
     min-height: 0;
     min-width: 0;
+    position: static;
+    /* margin-left: 50px; */
+
 }
+
 
 .leftTicketContainer {
     grid-area: left;
@@ -21,12 +25,28 @@
 }
 
 .eventTitle {
-    grid-area: left_top;
+    grid-area: 'left_top';
     overflow: hidden;
-    min-width: 0;
-    min-height: 0;
+    /* min-width: 0;
+    min-height: 0; */
     font-weight: bold;
-    margin-left: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    /* text-align: center; */
+    font-weight: 400;
+    position:center;
+    text-align: center;
+}
+
+.ticketH1{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    grid-template-areas: 'left_down';
+    position:absolute;
+    top: 0;
+    margin-top: 100px;
+    margin-left: 50px;
 }
 
 .ticketpagemodal_form {
@@ -34,10 +54,13 @@
     overflow: hidden;
     min-width: 0;
     min-height: 0;
-    margin-left: 10px;
+    margin-left: 50px;
     max-width: 100%;
     max-height: 100%;
     overflow: hidden;
+    margin-top: 50px;
+    margin-right: 40px;
+
 }
 
 .rightTicketContainer {
@@ -49,7 +72,8 @@
     grid-template-areas: 'right_top'
                          'right_down';
     min-height: 0;  /* NEW */
-    border-left: grey solid;
+    border-left: rgb(214, 211, 211) solid;
+    border-width: 2px;
 }
 
 .ticket-img {
@@ -73,6 +97,22 @@
 }
 
 .checkoutBtn {
+    position: absolute;
+    bottom:   0;
+    left:0;
+    right: 0;
+    text-align: center;
+    background-color: #D1410C ;
+    color: white;
+
+    font-size: 15px;
+    /* border-radius: 4px; */
+    height: 45px;
+    width: 57.3%;
+    border: none;
+    overflow: hidden;
+
+
 
 }
 

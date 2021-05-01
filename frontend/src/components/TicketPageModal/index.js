@@ -38,7 +38,7 @@ function TicketPageModal() {
           <div className='eventTitle'>
             {event.title}
           </div>
-
+          <h1 className="ticketH1">Tickets</h1>
           <form className='ticketpagemodal_form' onSubmit={handleSubmit}>
             {tickets?.map(ticket => {return (
                 <div className="ticketItem">

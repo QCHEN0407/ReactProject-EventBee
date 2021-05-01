@@ -39,7 +39,26 @@ module.exports = {
           category_name: 'Health',
           createdAt: new Date(),
           updatedAt: new Date()
-        }
+        },
+        {
+          id:7,
+          category_name: "Mother's Day",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:8,
+          category_name: "All Events",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id:9,
+          category_name: "Free",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+
     ], {});
 
   },
