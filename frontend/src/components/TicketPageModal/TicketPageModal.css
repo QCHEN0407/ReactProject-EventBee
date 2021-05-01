@@ -36,6 +36,7 @@
     font-weight: 400;
     position:center;
     text-align: center;
+    border-bottom: rgb(214, 211, 211) solid;
 }
 
 .ticketH1{
