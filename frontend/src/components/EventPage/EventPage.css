@@ -218,5 +218,12 @@
 }
 
 .ticketArea_title {
-    margin-top: 100px;
+    margin-top: 50px;
+}
+
+.google_map {
+    border-radius: 15px;
+    margin-top: 50px;
+    width: 300px;
+    height: 200px;
 }

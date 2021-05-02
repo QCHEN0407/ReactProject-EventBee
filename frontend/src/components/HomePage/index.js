@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './HomePage.css';
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from 'react-redux';
-import { getEventById, getEvents, filterEventsByCategoryId } from '../../store/event'
+import { getEventById, getEvents, filterEventsByCategoryId, searchEvents } from '../../store/event';
 import { useHistory } from "react-router-dom";
 
 function HomePage({isLoaded}) {
@@ -31,7 +31,11 @@ function HomePage({isLoaded}) {
         } else {
             dispatch(filterEventsByCategoryId(categoryId));
         }
-
+        window.scroll({
+            top:625,
+            left:0,
+            behavior: 'smooth'
+        });
     }
 
  return(
@@ -45,7 +49,7 @@ function HomePage({isLoaded}) {
             <div className="greySquare"></div>
             <h1 className="orangeText">Discover the best</h1>
             <h1 className="blackText">online events</h1>
-            <button style={{cursor: 'pointer'}} className="getTicketsBtn" >Get tickets</button>
+            <button style={{cursor: 'pointer'}} onClick={() => {getEventsByCategoryId(4)}} className="getTicketsBtn" >Get tickets</button>
             <img className="homepageImg" src="../imgs/HomepagePic.png"></img>
         <div className="secondNavbar">
             <div className="searchfield">

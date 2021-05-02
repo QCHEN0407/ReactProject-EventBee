@@ -19,8 +19,11 @@ function MyEventsPage() {
     const history = useHistory();
 
     useEffect(() => {
-        dispatch(getBookmarksByUserId(sessionUser));
-        dispatch(getPurchasesByUser(sessionUser));
+        if(sessionUser) {
+            dispatch(getBookmarksByUserId(sessionUser));
+            dispatch(getPurchasesByUser(sessionUser));
+        }
+        
     }, [dispatch]);
 
     const toEventPage = (id) => {
@@ -31,6 +34,11 @@ function MyEventsPage() {
         const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
         let newDate = new Date(dateString);
         return `${monthNames[newDate.getMonth()]} ${newDate.getDay()} ${newDate.getFullYear()}`
+    }
+    
+    if (!sessionUser) {
+        history.push('/login');
+        return null;
     }
 
     return (

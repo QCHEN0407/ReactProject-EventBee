@@ -1,5 +1,7 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 const { Event, Ticket, Tag } = require('../../db/models');
 
@@ -22,6 +24,21 @@ router.get('/category/:categoryId', asyncHandler(async (req, res) => {
     });
 
     return res.json(tags.map(tag => tag.Event));
+}));
+
+
+router.get('/search/:searchString', asyncHandler(async (req, res) => {
+
+    let searchString = req.params.searchString;
+    let events = await Event.findAll({
+        where: {
+            title: {
+                [Op.iLike]: `%${searchString}%`
+            }
+        }
+    });
+
+    return res.json(events);
 }));
 
 
