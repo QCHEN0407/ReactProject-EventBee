@@ -82,6 +82,8 @@ module.exports = {
         event_date: new Date(),
         location: 'New York',
         creater_id: 2,
+        lat:40.730610,
+        long:-73.935242,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -120,6 +122,8 @@ module.exports = {
         event_date: new Date(),
         location: 'Washington D.C.',
         creater_id: 3,
+        lat:38.89511,
+        long:-77.03637,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -146,6 +150,8 @@ module.exports = {
         event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F132096765%2F272601395150%2F1%2Foriginal.20210413-182406?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C3000%2C1500&s=793c28dc521665c4f74ba8f7467afc90',
         event_date: new Date(),
         location: 'Seattle',
+        lat:47.608013,
+        long:-122.335167,
         creater_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -178,6 +184,8 @@ module.exports = {
         event_date: new Date(),
         location: 'San Francisco',
         creater_id: 2,
+        lat:37.773972,
+        long:-122.431297,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -214,6 +222,8 @@ module.exports = {
         event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F116837057%2F321310090885%2F1%2Foriginal.20201105-075340?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2bfd614ae913d4186ea38bf126ab3be4',
         event_date: new Date(),
         location: 'Boston',
+        lat:42.361145,
+        long:-71.057083,
         creater_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -291,6 +301,8 @@ module.exports = {
         event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F128401545%2F57848390869%2F1%2Foriginal.20210303-164720?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=95a69584899a027639dcc071a7ae0a5c',
         event_date: new Date(),
         location: 'Paris, France',
+        lat:48.858093,
+        long:2.294694,
         creater_id: 3,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -350,6 +362,8 @@ module.exports = {
         event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F131038195%2F172125007556%2F1%2Foriginal.20210402-170053?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C67%2C1920%2C960&s=fdf8ae24b5a576e3903fdbe51e60db35',
         event_date: new Date(),
         location: 'Dallas, TX',
+        lat:32.779167,
+        long:-96.808891,
         creater_id: 2,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -363,6 +377,8 @@ module.exports = {
         event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F128035055%2F513364564951%2F1%2Foriginal.20210304-214058?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C4800%2C2400&s=7ef6231e238bdfa91d345125331d72f1',
         event_date: new Date(),
         location: 'Austin, TX',
+        lat:30.266666,
+        long:-97.733330,
         creater_id: 3,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -380,6 +396,8 @@ module.exports = {
         event_img: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F125694371%2F479275886939%2F1%2Foriginal.20210210-014026?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C20%2C1280%2C640&s=60bd9398602f0cd65a0f49e1f1e83d38',
         event_date: new Date(),
         location: 'Sweden',
+        lat:59.334591,
+        long:18.063240,
         creater_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
