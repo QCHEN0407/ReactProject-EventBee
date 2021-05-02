@@ -30,17 +30,23 @@ function MyEventsPage() {
     return (
         <div>
             <Navigation />
-            Welcome to My Event Page! {sessionUser.username}
+        <div className="outerContainer">
+            <h1 claaName="welcome">Welcome to My Event Page! {sessionUser.username}</h1>
+            <h1 class="orderTitle">
+                Your Orders
+            </h1>
             <div class="purchased_tickets">
-                Purchased Tickets
-            </div>
-            <div class="bookmarked_events">
                 {
                     purchases?.map(e =>  { return (
-                        <div style={{cursor: 'pointer'}} className="card" onClick={()=>{toEventPage(e.Ticket.Event.id)}}>
-                            <img className='image' src={e.Ticket.Event.event_img} alt="picture" />
+                        <div style={{cursor: 'pointer'}} className="ticket_card" onClick={()=>{toEventPage(e.Ticket.Event.id)}}>
+                            <img className='ticket_image' src={e.Ticket.Event.event_img} alt="picture" />
                             <div className="container">
-                                {e.Ticket.Event.title}
+                                <div className="ticket_title">{e.Ticket.Event.title}</div>
+                                <div className="date">{e.Ticket.Event.event_date}</div>
+                                <div>{e.Ticket.title}</div>
+                                <div>Ticket Price: ${e.Ticket.price}</div>
+                                <div>Number of Tickets Bought: {e.quantity}</div>
+
                             </div>
                         </div>
                         )
@@ -48,9 +54,10 @@ function MyEventsPage() {
 
                 }
             </div>
-            <div class="purchased_tickets">
+        <div>
+            <h1 class="bookmarkTitle">
                 Bookmarked Events
-            </div>
+            </h1>
             <div class="bookmarked_events">
                 {
                     bookmarkedEvents?.map(e =>  { return (
@@ -58,6 +65,7 @@ function MyEventsPage() {
                             <img className='image' src={e.Event.event_img} alt="picture" />
                             <div className="container">
                                 {e.Event.title}
+
                             </div>
                         </div>
                         )
@@ -65,8 +73,11 @@ function MyEventsPage() {
 
                 }
             </div>
+        </div>
+        </div>
             <GlobalFooter />
         </div>
+
     );
 }
 
