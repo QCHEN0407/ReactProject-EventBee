@@ -92,6 +92,7 @@ margin-top: 50px;
     flex-direction: row;
     justify-content: flex-start;
     margin-left: -70px;
+    flex-wrap: wrap;
 }
 
 .bookmarkTitle{
