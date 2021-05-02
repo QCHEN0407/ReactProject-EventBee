@@ -70,6 +70,16 @@ export const filterEventsByCategoryId = (categoryId) => async dispatch => {
   }
 };
 
+
+export const searchEvents = (searchString) => async dispatch => {
+  const response = await csrfFetch(`/api/events/search/${searchString}`);
+
+  if (response.ok) {
+    const events = await response.json();
+    dispatch(filterEventsAction(events));
+  }
+};
+
 const initialState = { events: [] };
 
 const eventReducer = (state = initialState, action) => {

@@ -41,6 +41,20 @@ function EventPage() {
         script.async = true;
         document.body.appendChild(script);
 
+        const google_map_script = document.createElement('script');
+        google_map_script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCs8UCbtHYbl_NDL842oH0jEiV_k3ATOCo";
+        google_map_script.async = true;
+        google_map_script.crossorigin="anonymous";
+        window.document.body.appendChild(google_map_script);
+        google_map_script.addEventListener('load', () => {
+            console.log("Hello Google Map!!!!!");
+            let map = new window.google.maps.Map(document.getElementById("map"), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8,
+                disableDefaultUI: true,
+            });
+        });
+
         return () => {
           document.body.removeChild(script);
         }
@@ -98,6 +112,10 @@ function EventPage() {
         );
     }
 
+    
+    
+
+
     return (
         <div>
             <div>
@@ -110,6 +128,7 @@ function EventPage() {
                     <h1>
                         <div className="ticketArea_date">{parseDateString(event.event_date)}</div>
                         <div className="ticketArea_title">{event.title}</div>
+                        <div id="map" className="google_map"></div>
                     </h1>
                 </div>
                 <div className="buttonArea">

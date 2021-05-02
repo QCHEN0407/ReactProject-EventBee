@@ -5,12 +5,14 @@ import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import { useHistory } from "react-router-dom";
 import LoginFormPage from "../LoginFormPage";
+import { searchEvents } from '../../store/event';
 import * as sessionActions from '../../store/session';
 
 function Navigation({ isLoaded }){
   const history = useHistory();
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
+  const events = useSelector(state => state.event.events);
 
   const toLogin = () => {
     history.push('/login');
@@ -27,6 +29,16 @@ function Navigation({ isLoaded }){
     return dispatch(sessionActions.logout())
       .catch(async (res) => {
       });
+  }
+
+  const startSearch = () => {
+    const searchbar = document.querySelector('.navbar_search')
+    dispatch(searchEvents(searchbar.value));
+    window.scroll({
+      top:625,
+      left:0,
+      behavior: 'smooth'
+  });
   }
 
   let sessionLinks;
@@ -57,7 +69,7 @@ function Navigation({ isLoaded }){
           <img className='navbar_logo' src='/imgs/300.jpeg' alt=""/>
           <div className='search_bar'>
             <input className='navbar_search' type='search' placeholder="Search your event..." />
-            <img className='amplifier' src='../imgs/search3.png'></img>
+            <img className='amplifier' style={{cursor: 'pointer'}} onClick = {startSearch} src='../imgs/search3.png'></img>
           </div>
 
         </div>
