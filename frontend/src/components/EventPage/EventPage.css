@@ -211,3 +211,12 @@
     margin-top: -20px;
     margin-left: 80px;
 }
+
+.ticketArea_date {
+    margin-top: -80px;
+    color: gray;
+}
+
+.ticketArea_title {
+    margin-top: 100px;
+}

@@ -104,7 +104,7 @@ body {
     margin-bottom: 100px;
     width: 87%;
     margin-top: 80px;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap:wrap;
 
 }
