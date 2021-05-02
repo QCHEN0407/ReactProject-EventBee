@@ -74,6 +74,12 @@ function EventPage() {
         document.querySelector(".fas").classList.toggle("fa-color");
     }
 
+    const parseDateString = (dateString) => {
+        const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+        let newDate = new Date(dateString);
+        return `${monthNames[newDate.getMonth()]} ${newDate.getDay()} ${newDate.getFullYear()}`
+    }
+
     if (!event || !bookmarks) {
         return null;
     }
@@ -102,7 +108,8 @@ function EventPage() {
                 <img className='eventImage' src={event.event_img} alt=""/>
                 <div className="ticketArea">
                     <h1>
-                        {event.title}
+                        <div className="ticketArea_date">{parseDateString(event.event_date)}</div>
+                        <div className="ticketArea_title">{event.title}</div>
                     </h1>
                 </div>
                 <div className="buttonArea">
