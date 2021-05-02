@@ -27,6 +27,12 @@ function MyEventsPage() {
         history.push(`/event/${id}`)
     }
 
+    const parseDateString = (dateString) => {
+        const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+        let newDate = new Date(dateString);
+        return `${monthNames[newDate.getMonth()]} ${newDate.getDay()} ${newDate.getFullYear()}`
+    }
+
     return (
         <div>
             <Navigation />
@@ -42,7 +48,7 @@ function MyEventsPage() {
                             <img className='ticket_image' src={e.Ticket.Event.event_img} alt="picture" />
                             <div className="container">
                                 <div className="ticket_title">{e.Ticket.Event.title}</div>
-                                <div className="date">{e.Ticket.Event.event_date}</div>
+                                <div className="date">{parseDateString(e.Ticket.Event.event_date)}</div>
                                 <div>{e.Ticket.title}</div>
                                 <div>Ticket Price: ${e.Ticket.price}</div>
                                 <div>Number of Tickets Bought: {e.quantity}</div>
@@ -54,7 +60,7 @@ function MyEventsPage() {
 
                 }
             </div>
-        <div>
+        <div className="bookMarked_container">
             <h1 class="bookmarkTitle">
                 Bookmarked Events
             </h1>

@@ -181,13 +181,46 @@ body {
   input.second_search:focus {
     outline-width: 0;
 }
-.homepageFooter{
-    display: block;
+
+
+.homepageFooter {
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas: 'left_homepageFooter middle_homepageFooter right_homepageFooter';
+    display: flex;
     padding: 150px;
     text-align: center;
     background:#1E0A3C;
     margin-top: -3px;
     margin-bottom: none;
+    color: white;
+
+}
+.author{
+    font-weight: 100;
+    text-align: center;
+    grid-area: left_homepageFooter;
+    display: flex;
+    flex-direction: column;
+
+}
+.homepageFooter img{
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 17px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 70px;
+
+
+}
+.homepageFooter span {
+    color:red;
+
+}
+.homepageFooter a {
+    color: #f05537;
+    text-align: center;
 }
 .tagMenu{
     margin-left: 150px;

@@ -31,7 +31,7 @@ function HomePage({isLoaded}) {
         } else {
             dispatch(filterEventsByCategoryId(categoryId));
         }
-        
+
     }
 
  return(
@@ -80,7 +80,17 @@ function HomePage({isLoaded}) {
 
         </div>
 
-        <footer className="homepageFooter"></footer>
+        <footer className="homepageFooter">
+            <div className="author">
+                <div>Designed and made with <span>♥︎</span> in <br />NewYork by</div>
+
+                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEqQoTglqnIBw/profile-displayphoto-shrink_400_400/0/1574704466963?e=1625702400&v=beta&t=HDU9c0I0F_KfqiyI7M1LKbb7J1mTNmKqkHcLQOd9nP8"></img>
+                <a href="https://www.linkedin.com/in/qingweichen/">Qingwei Chen(Vivian)</a>
+            </div>
+            <div className="socialmedia"></div>
+            <div className="aboutApp"></div>
+        </footer>
+
 
     </div>
 

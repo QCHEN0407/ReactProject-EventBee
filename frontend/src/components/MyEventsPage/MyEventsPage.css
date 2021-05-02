@@ -85,3 +85,15 @@ margin-top: 50px;
     justify-content: space-between;
     flex-wrap:wrap;
 }
+
+
+.bookmarked_events {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: -70px;
+}
+
+.bookmarkTitle{
+    margin-left: -60px;
+}

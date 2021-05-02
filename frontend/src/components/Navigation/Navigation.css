@@ -212,7 +212,7 @@
     0 12px 10px rgba(0, 0, 0, 0.06),
     0 22px 17px rgba(0, 0, 0, 0.052);
   }
-  footer img{
+  /* footer img{
     box-sizing: border-box;
     max-height: 150px;
     max-width: 150px;
@@ -225,7 +225,7 @@
     0 12px 10px rgba(0, 0, 0, 0.06),
     0 22px 17px rgba(0, 0, 0, 0.052);
     margin: 10px;
-  }
+  } */
 
 
   footer p{
