@@ -1,1 +1,2 @@
-# ReactProject-EventBee
+# Welcome to EventBee🐝
+
