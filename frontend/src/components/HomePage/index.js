@@ -91,8 +91,17 @@ function HomePage({isLoaded}) {
                 <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEqQoTglqnIBw/profile-displayphoto-shrink_400_400/0/1574704466963?e=1625702400&v=beta&t=HDU9c0I0F_KfqiyI7M1LKbb7J1mTNmKqkHcLQOd9nP8"></img>
                 <a href="https://www.linkedin.com/in/qingweichen/">Qingwei Chen(Vivian)</a>
             </div>
-            <div className="socialmedia"></div>
-            <div className="aboutApp"></div>
+            <div className="socialmedia">
+                <h2>Contact</h2>
+                <img className="sm-img" src="../imgs/linkedIn.png" href="https://www.linkedin.com/in/qingweichen/"></img>
+                <img className="sm-img" src="../imgs/ins.png" href="https://www.instagram.com/qingwei_vv/"></img>
+                <img className="sm-img" src="../imgs/FB.png" href="https://www.facebook.com/profile.php?id=100004209971356"></img>
+                <img className="gh-img" src="../imgs/github002.png" href="https://github.com/QCHEN0407"></img>
+            </div>
+            <div className="aboutApp">
+                <h1>Eventbee</h1>
+                <p>Eventbee is a customized event hunter. To find the next adventure in your live.</p>
+            </div>
         </footer>
 
 

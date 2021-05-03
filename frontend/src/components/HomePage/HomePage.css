@@ -1,7 +1,7 @@
 body {
     padding-top: 75px;
     /* background-color:  #F5F5F5; */
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
     margin: 0;
   }
 
@@ -204,16 +204,25 @@ body {
 
 }
 .homepageFooter img{
-    height:50px;
-    width: 50px;
-    border-radius: 50%;
+    height:60px;
+    width: 60px;
+    border-radius: 30%;
     margin-top: 17px;
     margin-bottom: 20px;
     text-align: center;
     margin-left: 70px;
 
+}
+.socialmeida h2 {
+    text-align: center;
+    display: flex;
+    grid-area:middle_homepageFooter;
 
 }
+.socialmedia img{
+    margin-right: -50px;
+}
+
 .homepageFooter span {
     color:red;
 

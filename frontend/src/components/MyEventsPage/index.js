@@ -23,7 +23,7 @@ function MyEventsPage() {
             dispatch(getBookmarksByUserId(sessionUser));
             dispatch(getPurchasesByUser(sessionUser));
         }
-        
+
     }, [dispatch]);
 
     const toEventPage = (id) => {
@@ -35,7 +35,7 @@ function MyEventsPage() {
         let newDate = new Date(dateString);
         return `${monthNames[newDate.getMonth()]} ${newDate.getDay()} ${newDate.getFullYear()}`
     }
-    
+
     if (!sessionUser) {
         history.push('/login');
         return null;
