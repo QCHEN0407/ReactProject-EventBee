@@ -52,11 +52,8 @@ function EventPage() {
         google_map_script.crossorigin="anonymous";
         window.document.body.appendChild(google_map_script);
         google_map_script.addEventListener('load', () => {
-            console.log("Hello Google Map!!!!!");
             const myLatLng = { lat: 40.730610, lng: -73.935242 };
             if(event && event.lat && event.long) {
-                console.log(Number(event.lat));
-                console.log(Number(event.long));
                 myLatLng.lat = Number(event.lat);
                 myLatLng.lng = Number(event.long);
             }
@@ -106,7 +103,8 @@ function EventPage() {
     const parseDateString = (dateString) => {
         const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
         let newDate = new Date(dateString);
-        return `${monthNames[newDate.getMonth()]} ${newDate.getDay()} ${newDate.getFullYear()}`
+        console.log(newDate);
+        return `${monthNames[newDate.getMonth()]} ${newDate.getDay()+1} ${newDate.getFullYear()}`
     }
 
     if (!event || !bookmarks) {
