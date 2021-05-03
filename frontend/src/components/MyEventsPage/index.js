@@ -33,7 +33,7 @@ function MyEventsPage() {
     const parseDateString = (dateString) => {
         const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
         let newDate = new Date(dateString);
-        return `${monthNames[newDate.getMonth()]} ${newDate.getDay()} ${newDate.getFullYear()}`
+        return `${monthNames[newDate.getMonth()]} ${newDate.getDay()+1} ${newDate.getFullYear()}`
     }
 
     if (!sessionUser) {
