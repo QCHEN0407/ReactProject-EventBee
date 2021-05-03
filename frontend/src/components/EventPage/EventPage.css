@@ -78,7 +78,6 @@
 
 }
 
-
 .ticketbtn{
     font-weight: 600;
     color: #FFF;
@@ -218,12 +217,13 @@
 }
 
 .ticketArea_title {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .google_map {
     border-radius: 15px;
     margin-top: 50px;
-    width: 300px;
+    width: 330px;
     height: 200px;
+    margin-left: -20px;
 }

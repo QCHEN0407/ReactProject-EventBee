@@ -32,7 +32,7 @@ function TicketPageModal() {
                 dispatch(addPurchase(sessionUser, ticketId, quantity));
             }
         });
-        history.push('/');
+        history.push('/myEvents');
 
     };
 

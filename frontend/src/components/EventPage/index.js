@@ -125,8 +125,8 @@ function EventPage() {
         );
     }
 
-    
-    
+
+
 
 
     return (
