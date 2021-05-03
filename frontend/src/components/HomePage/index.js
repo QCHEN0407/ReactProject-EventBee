@@ -127,7 +127,7 @@ function HomePage({isLoaded}) {
             </div>
 
         </footer>
-
+            <GlobalFooter />
 
     </div>
 
