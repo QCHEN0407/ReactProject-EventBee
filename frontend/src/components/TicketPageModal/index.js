@@ -74,7 +74,9 @@ function TicketPageModal() {
           <div className="ticket-img">
             <img className="actual-img" src={event.event_img} alt=""/>
           </div>
-          <div className="shopCart"></div>
+          <div className="shopCart">
+            <img src="../imgs/shopping-cart.png"></img>
+          </div>
         </div>
 
       </div>

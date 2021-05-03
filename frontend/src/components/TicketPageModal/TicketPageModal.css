@@ -133,3 +133,10 @@
     width: 50px;
     height: 30px;
 }
+
+.shopCart img {
+    height: 40px;
+    width: 40px;
+    margin-top: 140px;
+    margin-left: 150px;
+}
