@@ -36,12 +36,11 @@ margin-top: 50px;
 }
 .bookmarked_event {
     display: flex;
-    /* flex-direction: row; */
-    margin-left: auto;
+    flex-direction: row;
+    margin-left: 100px;
     margin-right: auto;
     margin-bottom: 100px;
     width: 87%;
-    margin-top: 80px;
     justify-content: space-between;
     flex-wrap:wrap;
 
@@ -82,19 +81,20 @@ margin-top: 50px;
 }
 .bookMarked_container{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
     flex-wrap:wrap;
 }
 
 
-.bookmarked_events {
+div.bookmarked_events {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-left: -70px;
+    margin-left: -10px;
     flex-wrap: wrap;
 }
 
-.bookmarkTitle{
-    margin-left: -60px;
+h1.bookmarkTitle{
+    margin-left: 0px;
 }
