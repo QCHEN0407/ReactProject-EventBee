@@ -202,6 +202,7 @@ body {
     display: flex;
     flex-direction: column;
 
+
 }
 .homepageFooter img{
     height:60px;
@@ -213,10 +214,21 @@ body {
     margin-left: 70px;
 
 }
-.socialmeida h2 {
+
+.socialmedia {
+    margin-left: 160px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+.socialmedia h2 {
     text-align: center;
     display: flex;
     grid-area:middle_homepageFooter;
+    color:#f05537;
+    margin-left: 150px;
+    font-size: 30px;
+    font-family: Futura;
+    font-weight: bold;
 
 }
 .socialmedia img{
@@ -230,6 +242,11 @@ body {
 .homepageFooter a {
     color: #f05537;
     text-align: center;
+}
+
+.aboutApp h1 {
+    color:#f05537;
+    margin-left: 100px;
 }
 .tagMenu{
     margin-left: 150px;
@@ -250,4 +267,26 @@ body {
     border-bottom: black solid;
     color:black;
     border-width: 1px;
+}
+
+.aboutApp {
+    margin-left: 140px;
+    margin-top: -25px;
+}
+
+.aboutApp p {
+    margin-left: 100px;
+    grid-area: right_homepageFooter;
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    max-width: 200px;
+}
+.aboutApp h1{
+    font-size: 30px;
+    font-family: Futura;
+    font-weight: bold;
+    margin-bottom: 15px;
 }

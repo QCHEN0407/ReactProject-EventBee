@@ -94,13 +94,14 @@ function HomePage({isLoaded}) {
             <div className="socialmedia">
                 <h2>Contact</h2>
                 <img className="sm-img" src="../imgs/linkedIn.png" href="https://www.linkedin.com/in/qingweichen/"></img>
-                <img className="sm-img" src="../imgs/ins.png" href="https://www.instagram.com/qingwei_vv/"></img>
-                <img className="sm-img" src="../imgs/FB.png" href="https://www.facebook.com/profile.php?id=100004209971356"></img>
                 <img className="gh-img" src="../imgs/github002.png" href="https://github.com/QCHEN0407"></img>
+                <img className="sm-img" src="../imgs/FB.png" href="https://www.facebook.com/profile.php?id=100004209971356"></img>
+                <img className="sm-img" src="../imgs/ins.png" href="https://www.instagram.com/qingwei_vv/"></img>
+
             </div>
             <div className="aboutApp">
                 <h1>Eventbee</h1>
-                <p>Eventbee is a customized event hunter. To find the next adventure in your live.</p>
+                <p>Eventbee is a customized event hunter. To find the next adventure in your live.To meet the next friend in your world.</p>
             </div>
         </footer>
 
