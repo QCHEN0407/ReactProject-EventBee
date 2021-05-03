@@ -187,7 +187,7 @@ body {
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-areas: 'left_homepageFooter middle_homepageFooter right_homepageFooter';
     display: flex;
-    padding: 150px;
+    padding: 100px;
     text-align: center;
     background:#1E0A3C;
     margin-top: -3px;
@@ -270,7 +270,7 @@ body {
 }
 
 .aboutApp {
-    margin-left: 140px;
+    margin-left: 190px;
     margin-top: -25px;
 }
 

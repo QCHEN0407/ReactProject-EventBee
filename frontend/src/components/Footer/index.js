@@ -3,7 +3,9 @@ import './Footer.css';
 
 function GlobalFooter (){
     return (
-        <footer className="globalFooter"></footer>
+        <footer className="globalFooter">
+            © 2021 Vivianchen. Eventbee. All rights reserved.
+        </footer>
     )
 }
 

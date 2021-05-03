@@ -4,6 +4,7 @@ import Navigation from "../Navigation";
 import { useDispatch, useSelector } from 'react-redux';
 import { getEventById, getEvents, filterEventsByCategoryId, searchEvents } from '../../store/event';
 import { useHistory } from "react-router-dom";
+import GlobalFooter from "../Footer";
 
 function HomePage({isLoaded}) {
 
@@ -105,16 +106,26 @@ function HomePage({isLoaded}) {
             </div>
             <div className="socialmedia">
                 <h2>Contact</h2>
-                <img className="sm-img" src="../imgs/linkedIn.png" href="https://www.linkedin.com/in/qingweichen/"></img>
-                <img className="gh-img" src="../imgs/github002.png" href="https://github.com/QCHEN0407"></img>
-                <img className="sm-img" src="../imgs/FB.png" href="https://www.facebook.com/profile.php?id=100004209971356"></img>
-                <img className="sm-img" src="../imgs/ins.png" href="https://www.instagram.com/qingwei_vv/"></img>
+                <a href="https://www.linkedin.com/in/qingweichen/">
+                    <img  src="../imgs/linkedIn.png" ></img>
+                </a>
+                <a href="https://github.com/QCHEN0407">
+                    <img  src="../imgs/github002.png" ></img>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100004209971356">
+                    <img  src="../imgs/FB.png"></img>
+                </a>
+                <a href="https://www.instagram.com/qingwei_vv/">
+                    <img  src="../imgs/ins.png"></img>
+                </a>
+
 
             </div>
             <div className="aboutApp">
                 <h1>Eventbee</h1>
                 <p>Eventbee is a customized event hunter. To find the next adventure in your live.To meet the next friend in your world.</p>
             </div>
+
         </footer>
 
 

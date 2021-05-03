@@ -1,11 +1,16 @@
 .globalFooter{
-  position: fixed;
+  /* position: fixed; */
   left: 0;
-  bottom: 0;
+  margin-bottom: none;
   width: 100%;
   background-color: #1E0A3C;
-  color: white;
-  text-align: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  /* text-align: center; */
   padding: 27px;
+  color:grey;
+  text-align: left;
 
 }
