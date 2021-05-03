@@ -40,7 +40,12 @@ function EventPage() {
         script.crossorigin="anonymous";
         script.async = true;
         document.body.appendChild(script);
+        return () => {
+          document.body.removeChild(script);
+        }
+    }, []);
 
+    useEffect(() => {
         const google_map_script = document.createElement('script');
         google_map_script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCs8UCbtHYbl_NDL842oH0jEiV_k3ATOCo";
         google_map_script.async = true;
@@ -48,17 +53,27 @@ function EventPage() {
         window.document.body.appendChild(google_map_script);
         google_map_script.addEventListener('load', () => {
             console.log("Hello Google Map!!!!!");
+            const myLatLng = { lat: 40.730610, lng: -73.935242 };
+            if(event && event.lat && event.long) {
+                console.log(Number(event.lat));
+                console.log(Number(event.long));
+                myLatLng.lat = Number(event.lat);
+                myLatLng.lng = Number(event.long);
+            }
+
             let map = new window.google.maps.Map(document.getElementById("map"), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8,
+                center: myLatLng,
+                zoom: 10,
                 disableDefaultUI: true,
             });
-        });
 
-        return () => {
-          document.body.removeChild(script);
-        }
-    }, []);
+            new window.google.maps.Marker({
+                position:myLatLng,
+                map,
+                title: "Hello World!",
+              });
+        });
+    }, [event])
 
     const toEventPage = (id) => {
         dispatch(getEventById(id));

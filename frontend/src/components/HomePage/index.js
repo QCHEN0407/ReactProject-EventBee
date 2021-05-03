@@ -15,6 +15,18 @@ function HomePage({isLoaded}) {
         dispatch(getEvents());
     }, [dispatch]);
 
+    useEffect(() => {
+        const titleImage = document.createElement('link');
+        titleImage.rel = "icon";
+        titleImage.href="/imgs/300.jpeg";
+        titleImage.type = "image/x-icon";
+        document.head.appendChild(titleImage);
+        return () => {
+          document.head.removeChild(titleImage);
+        }
+
+    }, []);
+
     const toEventPage = (id) => {
         history.push(`/event/${id}`);
         window.scroll({
