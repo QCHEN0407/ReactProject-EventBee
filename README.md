@@ -9,7 +9,7 @@ Please check out the following Wiki documents:
 - [Database Schema](https://github.com/QCHEN0407/ReactProject-EventBee/wiki/Database-Schema)
 - [API Documents](https://github.com/QCHEN0407/ReactProject-EventBee/wiki/API-Documentation)
 - [Frontend Routes](https://github.com/QCHEN0407/ReactProject-EventBee/wiki/Frontend-Routes)
-- React Components
+- [React Components](https://github.com/QCHEN0407/ReactProject-EventBee/wiki/React-Components)
 
 ## Technologies used:
 #### Backend
