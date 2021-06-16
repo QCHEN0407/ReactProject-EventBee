@@ -1,7 +1,7 @@
 .globalFooter{
   /* position: fixed; */
   left: 0;
-  margin-bottom: none;
+  margin-bottom: 0px;
   width: 100%;
   background-color: #1E0A3C;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;

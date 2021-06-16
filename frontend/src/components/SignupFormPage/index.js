@@ -80,10 +80,12 @@ function SignupFormPage() {
         </form>
         </div>
         <div>
-        <GlobalFooter />
+
 
       </div>
+      <GlobalFooter />
       </div>
+
     );
   }
 
